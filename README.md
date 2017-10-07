@@ -5,3 +5,5 @@
 
 ### Требования к проекту
 
+Требования к проекту находятся в файле Requirements Document for project.pdf 
+
