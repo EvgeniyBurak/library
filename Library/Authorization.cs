@@ -46,7 +46,7 @@ namespace Library
             if (dt.Rows[0][0].ToString() == "1") 
             {
                 this.Hide();
-                Form2 f = new Form2();
+                FormSearch f = new FormSearch();
                 f.Show();
             } else {
                 MessageBox.Show("Неверный логин или пароль");
