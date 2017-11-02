@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 using System.Security.Cryptography;
 namespace Library
 {
-    public partial class Form1 : Form
+    public partial class Authorization : Form
     {
-        public Form1()
+        public Authorization()
         {
             InitializeComponent();
         }
