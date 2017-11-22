@@ -32,5 +32,15 @@ namespace Library.Properties {
                 return ((string)(this["LibraryConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ЖЕНЯ-ПК;Initial Catalog=Books;Integrated Security=True")]
+        public string BooksConnectionString {
+            get {
+                return ((string)(this["BooksConnectionString"]));
+            }
+        }
     }
 }

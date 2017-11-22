@@ -67,6 +67,26 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -81,6 +101,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBook.Designer.cs">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddBook0.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBook0.Designer.cs">
+      <DependentUpon>AddBook0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddBook1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBook1.Designer.cs">
+      <DependentUpon>AddBook1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddBook2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddBook2.Designer.cs">
+      <DependentUpon>AddBook2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Book.cs" />
     <Compile Include="Authorization.cs">
       <SubType>Form</SubType>
@@ -88,16 +132,19 @@
     <Compile Include="Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
+    <Compile Include="BooksDataSet.cs">
+      <DependentUpon>BooksDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BooksDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BooksDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LibraryDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +154,18 @@
     <Compile Include="registration.Designer.cs">
       <DependentUpon>registration.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddBook.resx">
+      <DependentUpon>AddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddBook0.resx">
+      <DependentUpon>AddBook0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddBook1.resx">
+      <DependentUpon>AddBook1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddBook2.resx">
+      <DependentUpon>AddBook2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,21 +180,23 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="registration.resx">
       <DependentUpon>registration.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="LibraryDataSet.xsc">
-      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
+    <None Include="BooksDataSet.xsc">
+      <DependentUpon>BooksDataSet.xsd</DependentUpon>
     </None>
-    <None Include="LibraryDataSet.xsd">
+    <None Include="BooksDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>LibraryDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>BooksDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="LibraryDataSet.xss">
-      <DependentUpon>LibraryDataSet.xsd</DependentUpon>
+    <None Include="BooksDataSet.xss">
+      <DependentUpon>BooksDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -163,6 +224,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon\magnifier.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

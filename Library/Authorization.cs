@@ -28,7 +28,9 @@ namespace Library
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MD5 md5 = System.Security.Cryptography.MD5.Create();
+            FormSearch f = new FormSearch();
+            f.Show();
+            /*MD5 md5 = System.Security.Cryptography.MD5.Create();
             byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(textBox2.Text);
             byte[] hash = md5.ComputeHash(inputBytes);
 
@@ -51,7 +53,8 @@ namespace Library
             } else {
                 MessageBox.Show("Неверный логин или пароль");
             
-            }
+            }*/
+
         }
     }
 }
