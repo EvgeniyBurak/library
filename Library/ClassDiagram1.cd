@@ -1,2 +1,202 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Library.Book">
+    <Position X="8.75" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAAQUASAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Book.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Header">
+    <Position X="12.5" Y="1.5" Width="2" />
+    <AssociationLine Name="Book" Type="Library.Book" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.5" Y="3.891" />
+        <Point X="13.5" Y="5.375" />
+        <Point X="10.5" Y="5.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAIAAIACAAAAABAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Book.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Book" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Library.Title">
+    <Position X="15.25" Y="1.5" Width="2.75" />
+    <AssociationLine Name="Book" Type="Library.Book" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.625" Y="5.43" />
+        <Point X="16.625" Y="6.434" />
+        <Point X="10.5" Y="6.434" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAABAAEEAAAAAQAIQIFAAAAABAEQAAAA=</HashCode>
+      <FileName>Book.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Book" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Library.Publication">
+    <Position X="1.25" Y="1.5" Width="5.25" />
+    <AssociationLine Name="Book" Type="Library.Book" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.875" Y="5.814" />
+        <Point X="3.875" Y="6.376" />
+        <Point X="8.75" Y="6.376" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ggAgAAAAABKAAAhAKAAAAAABQAAABAAAACAAAIAAAAA=</HashCode>
+      <FileName>Book.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Book" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Library.OutputData">
+    <Position X="8.25" Y="0.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AgAABABAAAAAAABAAAAAAAIAAAQAAQAAAAABABAAABA=</HashCode>
+      <FileName>Book.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Book" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Library.PhysicalCharacteristics">
+    <Position X="15.25" Y="8.5" Width="3.5" />
+    <AssociationLine Name="Book" Type="Library.Book" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="17.125" Y="8.5" />
+        <Point X="17.125" Y="7.103" />
+        <Point X="10.5" Y="7.103" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAABAAAAAAAIAAAgAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Book.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Book" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Library.Series">
+    <Position X="8" Y="10.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQACAABAAAAAAABAAAAgBAAgAAIAAAAAAAA=</HashCode>
+      <FileName>Book.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Book" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Library.StandardNumber">
+    <Position X="2.5" Y="8" Width="2.5" />
+    <AssociationLine Name="Book" Type="Library.Book" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.938" Y="8" />
+        <Point X="3.938" Y="7.25" />
+        <Point X="8.75" Y="7.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAABAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Book.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Book" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Library.AddBook" Collapsed="true">
+    <Position X="24.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>twAAAAAAQCAAABAAAACAAABiAAAIAAQAAEAAAQBKAiA=</HashCode>
+      <FileName>AddBook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.AddBook0" Collapsed="true">
+    <Position X="26.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ewAAAAACACAAAJAAQACAAAAKAAAoIAAAAFAgAwAAADA=</HashCode>
+      <FileName>AddBook0.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.AddBook1" Collapsed="true">
+    <Position X="28" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>1YACAQAAACQAAJAAAgCAAAACAAAoAEABIFCAARABACE=</HashCode>
+      <FileName>AddBook1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.AddBook2" Collapsed="true">
+    <Position X="29.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/wAAAAABQGIEABAAAAKAAAACAAAoAgAAAFAAAAAOIDA=</HashCode>
+      <FileName>AddBook2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Authorization" Collapsed="true">
+    <Position X="31.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAAABAAAACAAAACAAAYAAAAEGAAAABAAAA=</HashCode>
+      <FileName>Authorization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.BooksDataSet" Collapsed="true">
+    <Position X="35.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAwAAAAJABAAAQAABgAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.FormSearch" Collapsed="true">
+    <Position X="28" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASEAAEMEACBhMNQACIHBiABCgIiyAAAFR1iQAZKgACQ=</HashCode>
+      <FileName>Form2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Program" Collapsed="true">
+    <Position X="33.25" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAECAABAAAAAAAABAAJAAQ=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.registration" Collapsed="true">
+    <Position X="31.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAAAAAAAACAAAAAAAACEAAECAAAcAAAAAWAAAggAECA=</HashCode>
+      <FileName>registration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.BooksDataSetTableAdapters.BookTableAdapter" Collapsed="true">
+    <Position X="24.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACAICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.BooksDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="33.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAEAABABAEBAACAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Properties.Resources" Collapsed="true">
+    <Position X="26.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Library.Properties.Settings" Collapsed="true">
+    <Position X="29.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAIAAAAAABAAAAAAAAAAAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -65,6 +65,17 @@ namespace Library
             set { AuthorSign = value; }
         }
 
+        internal Book Book
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
     }
 
     class Title
@@ -166,7 +177,17 @@ namespace Library
             set { FurtherInformationOnLiability = value; }
         }
 
+        internal Book Book
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
 
+            set
+            {
+            }
+        }
     }
 
     class Publication
@@ -274,10 +295,17 @@ namespace Library
             set { FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication = value; }
         }
 
+        internal Book Book
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
 
-
-
-
+            set
+            {
+            }
+        }
     }
 
     class OutputData
@@ -308,9 +336,17 @@ namespace Library
             this.DateManufacture = DateManufacture;
         }
 
+        internal Book Book
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
 
-
-
+            set
+            {
+            }
+        }
     }
 
 
@@ -333,6 +369,17 @@ namespace Library
             this.InformationAccompanyingMaterial = InformationAccompanyingMaterial;
         }
 
+        internal Book Book
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
     }
 
     class Series
@@ -359,8 +406,17 @@ namespace Library
             this.IssueNumberSeries = IssueNumberSeries;
         }
 
+        internal Book Book
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
 
-
+            set
+            {
+            }
+        }
     }
 
     class StandardNumber
@@ -379,6 +435,17 @@ namespace Library
                
         }
 
+        internal Book Book
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+
+            set
+            {
+            }
+        }
     }
 
 
