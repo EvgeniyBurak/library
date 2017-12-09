@@ -32,62 +32,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSearch));
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.buttonChearch = new System.Windows.Forms.Button();
             this.comboBoxSearch = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.authorSignDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mainTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.generalMaterialDesignationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parallelTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.informationPertainingToTheTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstInformationOnLiabilityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.furtherInformationOnLiabilityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.informationOnThePublicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parallelInformationAboutThePublicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstInformationOnLiabilityRelatingPublicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.furtherInformationOnLiabilityRelatingPublicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.additionalInformationAboutPublicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstInformationOnLiabilityRelatingToAdditionalInformationPublicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.furtherInformationOnLiabilityRelatingToAdditionalInformationPublicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placePublicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstPlacePublicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subsequentPlacePublicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namePublisherDistributorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.informationAboutFunctionsPublisherDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datePublicationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.placeManufactureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.manufacturerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateManufactureDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.specificDesignationMaterialAndVolumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otherInformationAboutPhysicalCharacteristicsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dimensionsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.informationAccompanyingMaterialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titleSeriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.parallelTitleSeriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.informationPertainingTitleSeriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstInformationAboutLiabilityRelatedSeriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subsequentLiabilityInformationRelatingSeriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iSSNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.issueNumberSeriesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iSBNDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bBKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addDataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.booksDataSet = new Library.BooksDataSet();
-            this.bookTableAdapter = new Library.BooksDataSetTableAdapters.BookTableAdapter();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn37 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn38 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.book2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new Library.DataSet1();
+            this.book2TableAdapter = new Library.DataSet1TableAdapters.Book2TableAdapter();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.booksDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.book2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -104,45 +69,50 @@
             // 
             this.textBoxSearch.Location = new System.Drawing.Point(12, 135);
             this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(220, 22);
+            this.textBoxSearch.Size = new System.Drawing.Size(303, 22);
             this.textBoxSearch.TabIndex = 1;
-            // 
-            // buttonChearch
-            // 
-            this.buttonChearch.Location = new System.Drawing.Point(399, 112);
-            this.buttonChearch.Name = "buttonChearch";
-            this.buttonChearch.Size = new System.Drawing.Size(124, 47);
-            this.buttonChearch.TabIndex = 2;
-            this.buttonChearch.Text = "Поиск";
-            this.buttonChearch.UseVisualStyleBackColor = true;
-            this.buttonChearch.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBoxSearch
             // 
             this.comboBoxSearch.FormattingEnabled = true;
             this.comboBoxSearch.Items.AddRange(new object[] {
-            "ISBN/ISSN",
+            "ISBN",
             "Автор",
             "ББК",
             "Год издания",
             "Заглавие",
             "Издательство"});
-            this.comboBoxSearch.Location = new System.Drawing.Point(259, 135);
+            this.comboBoxSearch.Location = new System.Drawing.Point(342, 135);
             this.comboBoxSearch.Name = "comboBoxSearch";
             this.comboBoxSearch.Size = new System.Drawing.Size(121, 24);
             this.comboBoxSearch.TabIndex = 3;
-            this.comboBoxSearch.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBoxSearch.Text = "ISBN";
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.buttonUpdate);
             this.panel1.Controls.Add(this.buttonDelete);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1878, 65);
+            this.panel1.Size = new System.Drawing.Size(1342, 65);
             this.panel1.TabIndex = 5;
+            // 
+            // buttonUpdate
+            // 
+            this.buttonUpdate.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonUpdate.ForeColor = System.Drawing.Color.Navy;
+            this.buttonUpdate.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdate.Image")));
+            this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonUpdate.Location = new System.Drawing.Point(479, 3);
+            this.buttonUpdate.Name = "buttonUpdate";
+            this.buttonUpdate.Size = new System.Drawing.Size(165, 59);
+            this.buttonUpdate.TabIndex = 3;
+            this.buttonUpdate.Text = "Обновить";
+            this.buttonUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonDelete
             // 
@@ -150,13 +120,14 @@
             this.buttonDelete.ForeColor = System.Drawing.Color.Navy;
             this.buttonDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelete.Image")));
             this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDelete.Location = new System.Drawing.Point(345, 5);
+            this.buttonDelete.Location = new System.Drawing.Point(260, 3);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(165, 59);
             this.buttonDelete.TabIndex = 2;
             this.buttonDelete.Text = "Списание";
             this.buttonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // button3
             // 
@@ -164,7 +135,7 @@
             this.button3.ForeColor = System.Drawing.Color.Navy;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(148, 5);
+            this.button3.Location = new System.Drawing.Point(8, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(191, 59);
             this.button3.TabIndex = 1;
@@ -179,347 +150,122 @@
             this.button2.ForeColor = System.Drawing.Color.Navy;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 3);
+            this.button2.Location = new System.Drawing.Point(492, 100);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 59);
             this.button2.TabIndex = 0;
             this.button2.Text = "Поиск";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // booksBindingSource
-            // 
-            this.booksBindingSource.DataMember = "Books";
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.authorDataGridViewTextBoxColumn,
-            this.authorSignDataGridViewTextBoxColumn,
-            this.mainTitleDataGridViewTextBoxColumn,
-            this.generalMaterialDesignationDataGridViewTextBoxColumn,
-            this.parallelTitleDataGridViewTextBoxColumn,
-            this.informationPertainingToTheTitleDataGridViewTextBoxColumn,
-            this.firstInformationOnLiabilityDataGridViewTextBoxColumn,
-            this.furtherInformationOnLiabilityDataGridViewTextBoxColumn,
-            this.informationOnThePublicationDataGridViewTextBoxColumn,
-            this.parallelInformationAboutThePublicationDataGridViewTextBoxColumn,
-            this.firstInformationOnLiabilityRelatingPublicationDataGridViewTextBoxColumn,
-            this.furtherInformationOnLiabilityRelatingPublicationDataGridViewTextBoxColumn,
-            this.additionalInformationAboutPublicationDataGridViewTextBoxColumn,
-            this.firstInformationOnLiabilityRelatingToAdditionalInformationPublicationDataGridViewTextBoxColumn,
-            this.furtherInformationOnLiabilityRelatingToAdditionalInformationPublicationDataGridViewTextBoxColumn,
-            this.placePublicationDataGridViewTextBoxColumn,
-            this.firstPlacePublicationDataGridViewTextBoxColumn,
-            this.subsequentPlacePublicationDataGridViewTextBoxColumn,
-            this.namePublisherDistributorDataGridViewTextBoxColumn,
-            this.informationAboutFunctionsPublisherDataGridViewTextBoxColumn,
-            this.datePublicationDataGridViewTextBoxColumn,
-            this.placeManufactureDataGridViewTextBoxColumn,
-            this.manufacturerNameDataGridViewTextBoxColumn,
-            this.dateManufactureDataGridViewTextBoxColumn,
-            this.specificDesignationMaterialAndVolumeDataGridViewTextBoxColumn,
-            this.otherInformationAboutPhysicalCharacteristicsDataGridViewTextBoxColumn,
-            this.dimensionsDataGridViewTextBoxColumn,
-            this.informationAccompanyingMaterialDataGridViewTextBoxColumn,
-            this.titleSeriesDataGridViewTextBoxColumn,
-            this.parallelTitleSeriesDataGridViewTextBoxColumn,
-            this.informationPertainingTitleSeriesDataGridViewTextBoxColumn,
-            this.firstInformationAboutLiabilityRelatedSeriesDataGridViewTextBoxColumn,
-            this.subsequentLiabilityInformationRelatingSeriesDataGridViewTextBoxColumn,
-            this.iSSNDataGridViewTextBoxColumn,
-            this.issueNumberSeriesDataGridViewTextBoxColumn,
-            this.iSBNDataGridViewTextBoxColumn,
-            this.bBKDataGridViewTextBoxColumn,
-            this.priceDataGridViewTextBoxColumn,
-            this.addDataDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.bookBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 192);
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn37,
+            this.dataGridViewTextBoxColumn38});
+            this.dataGridView1.DataSource = this.book2BindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 192);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1594, 331);
+            this.dataGridView1.Size = new System.Drawing.Size(1342, 331);
             this.dataGridView1.TabIndex = 6;
             // 
-            // idDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Author";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Автор";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // authorDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.authorDataGridViewTextBoxColumn.DataPropertyName = "Author";
-            this.authorDataGridViewTextBoxColumn.HeaderText = "Author";
-            this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "MainTitle";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Заглавие";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 400;
             // 
-            // authorSignDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn10
             // 
-            this.authorSignDataGridViewTextBoxColumn.DataPropertyName = "AuthorSign";
-            this.authorSignDataGridViewTextBoxColumn.HeaderText = "AuthorSign";
-            this.authorSignDataGridViewTextBoxColumn.Name = "authorSignDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "InformationOnThePublication";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Издательство";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 150;
             // 
-            // mainTitleDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn17
             // 
-            this.mainTitleDataGridViewTextBoxColumn.DataPropertyName = "MainTitle";
-            this.mainTitleDataGridViewTextBoxColumn.HeaderText = "MainTitle";
-            this.mainTitleDataGridViewTextBoxColumn.Name = "mainTitleDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "PlacePublication";
+            this.dataGridViewTextBoxColumn17.HeaderText = "Место издания";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.Width = 150;
             // 
-            // generalMaterialDesignationDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn22
             // 
-            this.generalMaterialDesignationDataGridViewTextBoxColumn.DataPropertyName = "GeneralMaterialDesignation";
-            this.generalMaterialDesignationDataGridViewTextBoxColumn.HeaderText = "GeneralMaterialDesignation";
-            this.generalMaterialDesignationDataGridViewTextBoxColumn.Name = "generalMaterialDesignationDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn22.DataPropertyName = "DatePublication";
+            this.dataGridViewTextBoxColumn22.HeaderText = "Год издания";
+            this.dataGridViewTextBoxColumn22.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
             // 
-            // parallelTitleDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn37
             // 
-            this.parallelTitleDataGridViewTextBoxColumn.DataPropertyName = "ParallelTitle";
-            this.parallelTitleDataGridViewTextBoxColumn.HeaderText = "ParallelTitle";
-            this.parallelTitleDataGridViewTextBoxColumn.Name = "parallelTitleDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn37.DataPropertyName = "ISBN";
+            this.dataGridViewTextBoxColumn37.HeaderText = "ISBN";
+            this.dataGridViewTextBoxColumn37.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn37.Name = "dataGridViewTextBoxColumn37";
+            this.dataGridViewTextBoxColumn37.Width = 150;
             // 
-            // informationPertainingToTheTitleDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn38
             // 
-            this.informationPertainingToTheTitleDataGridViewTextBoxColumn.DataPropertyName = "InformationPertainingToTheTitle";
-            this.informationPertainingToTheTitleDataGridViewTextBoxColumn.HeaderText = "InformationPertainingToTheTitle";
-            this.informationPertainingToTheTitleDataGridViewTextBoxColumn.Name = "informationPertainingToTheTitleDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn38.DataPropertyName = "BBK";
+            this.dataGridViewTextBoxColumn38.HeaderText = "ББК";
+            this.dataGridViewTextBoxColumn38.MinimumWidth = 100;
+            this.dataGridViewTextBoxColumn38.Name = "dataGridViewTextBoxColumn38";
+            this.dataGridViewTextBoxColumn38.Width = 150;
             // 
-            // firstInformationOnLiabilityDataGridViewTextBoxColumn
+            // book2BindingSource
             // 
-            this.firstInformationOnLiabilityDataGridViewTextBoxColumn.DataPropertyName = "FirstInformationOnLiability";
-            this.firstInformationOnLiabilityDataGridViewTextBoxColumn.HeaderText = "FirstInformationOnLiability";
-            this.firstInformationOnLiabilityDataGridViewTextBoxColumn.Name = "firstInformationOnLiabilityDataGridViewTextBoxColumn";
+            this.book2BindingSource.DataMember = "Book2";
+            this.book2BindingSource.DataSource = this.dataSet1;
             // 
-            // furtherInformationOnLiabilityDataGridViewTextBoxColumn
+            // dataSet1
             // 
-            this.furtherInformationOnLiabilityDataGridViewTextBoxColumn.DataPropertyName = "FurtherInformationOnLiability";
-            this.furtherInformationOnLiabilityDataGridViewTextBoxColumn.HeaderText = "FurtherInformationOnLiability";
-            this.furtherInformationOnLiabilityDataGridViewTextBoxColumn.Name = "furtherInformationOnLiabilityDataGridViewTextBoxColumn";
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // informationOnThePublicationDataGridViewTextBoxColumn
+            // book2TableAdapter
             // 
-            this.informationOnThePublicationDataGridViewTextBoxColumn.DataPropertyName = "InformationOnThePublication";
-            this.informationOnThePublicationDataGridViewTextBoxColumn.HeaderText = "InformationOnThePublication";
-            this.informationOnThePublicationDataGridViewTextBoxColumn.Name = "informationOnThePublicationDataGridViewTextBoxColumn";
-            // 
-            // parallelInformationAboutThePublicationDataGridViewTextBoxColumn
-            // 
-            this.parallelInformationAboutThePublicationDataGridViewTextBoxColumn.DataPropertyName = "ParallelInformationAboutThePublication";
-            this.parallelInformationAboutThePublicationDataGridViewTextBoxColumn.HeaderText = "ParallelInformationAboutThePublication";
-            this.parallelInformationAboutThePublicationDataGridViewTextBoxColumn.Name = "parallelInformationAboutThePublicationDataGridViewTextBoxColumn";
-            // 
-            // firstInformationOnLiabilityRelatingPublicationDataGridViewTextBoxColumn
-            // 
-            this.firstInformationOnLiabilityRelatingPublicationDataGridViewTextBoxColumn.DataPropertyName = "FirstInformationOnLiabilityRelatingPublication";
-            this.firstInformationOnLiabilityRelatingPublicationDataGridViewTextBoxColumn.HeaderText = "FirstInformationOnLiabilityRelatingPublication";
-            this.firstInformationOnLiabilityRelatingPublicationDataGridViewTextBoxColumn.Name = "firstInformationOnLiabilityRelatingPublicationDataGridViewTextBoxColumn";
-            // 
-            // furtherInformationOnLiabilityRelatingPublicationDataGridViewTextBoxColumn
-            // 
-            this.furtherInformationOnLiabilityRelatingPublicationDataGridViewTextBoxColumn.DataPropertyName = "FurtherInformationOnLiabilityRelatingPublication";
-            this.furtherInformationOnLiabilityRelatingPublicationDataGridViewTextBoxColumn.HeaderText = "FurtherInformationOnLiabilityRelatingPublication";
-            this.furtherInformationOnLiabilityRelatingPublicationDataGridViewTextBoxColumn.Name = "furtherInformationOnLiabilityRelatingPublicationDataGridViewTextBoxColumn";
-            // 
-            // additionalInformationAboutPublicationDataGridViewTextBoxColumn
-            // 
-            this.additionalInformationAboutPublicationDataGridViewTextBoxColumn.DataPropertyName = "AdditionalInformationAboutPublication";
-            this.additionalInformationAboutPublicationDataGridViewTextBoxColumn.HeaderText = "AdditionalInformationAboutPublication";
-            this.additionalInformationAboutPublicationDataGridViewTextBoxColumn.Name = "additionalInformationAboutPublicationDataGridViewTextBoxColumn";
-            // 
-            // firstInformationOnLiabilityRelatingToAdditionalInformationPublicationDataGridViewTextBoxColumn
-            // 
-            this.firstInformationOnLiabilityRelatingToAdditionalInformationPublicationDataGridViewTextBoxColumn.DataPropertyName = "FirstInformationOnLiabilityRelatingToAdditionalInformationPublication";
-            this.firstInformationOnLiabilityRelatingToAdditionalInformationPublicationDataGridViewTextBoxColumn.HeaderText = "FirstInformationOnLiabilityRelatingToAdditionalInformationPublication";
-            this.firstInformationOnLiabilityRelatingToAdditionalInformationPublicationDataGridViewTextBoxColumn.Name = "firstInformationOnLiabilityRelatingToAdditionalInformationPublicationDataGridView" +
-    "TextBoxColumn";
-            // 
-            // furtherInformationOnLiabilityRelatingToAdditionalInformationPublicationDataGridViewTextBoxColumn
-            // 
-            this.furtherInformationOnLiabilityRelatingToAdditionalInformationPublicationDataGridViewTextBoxColumn.DataPropertyName = "FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication";
-            this.furtherInformationOnLiabilityRelatingToAdditionalInformationPublicationDataGridViewTextBoxColumn.HeaderText = "FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication";
-            this.furtherInformationOnLiabilityRelatingToAdditionalInformationPublicationDataGridViewTextBoxColumn.Name = "furtherInformationOnLiabilityRelatingToAdditionalInformationPublicationDataGridVi" +
-    "ewTextBoxColumn";
-            // 
-            // placePublicationDataGridViewTextBoxColumn
-            // 
-            this.placePublicationDataGridViewTextBoxColumn.DataPropertyName = "PlacePublication";
-            this.placePublicationDataGridViewTextBoxColumn.HeaderText = "PlacePublication";
-            this.placePublicationDataGridViewTextBoxColumn.Name = "placePublicationDataGridViewTextBoxColumn";
-            // 
-            // firstPlacePublicationDataGridViewTextBoxColumn
-            // 
-            this.firstPlacePublicationDataGridViewTextBoxColumn.DataPropertyName = "FirstPlacePublication";
-            this.firstPlacePublicationDataGridViewTextBoxColumn.HeaderText = "FirstPlacePublication";
-            this.firstPlacePublicationDataGridViewTextBoxColumn.Name = "firstPlacePublicationDataGridViewTextBoxColumn";
-            // 
-            // subsequentPlacePublicationDataGridViewTextBoxColumn
-            // 
-            this.subsequentPlacePublicationDataGridViewTextBoxColumn.DataPropertyName = "SubsequentPlacePublication";
-            this.subsequentPlacePublicationDataGridViewTextBoxColumn.HeaderText = "SubsequentPlacePublication";
-            this.subsequentPlacePublicationDataGridViewTextBoxColumn.Name = "subsequentPlacePublicationDataGridViewTextBoxColumn";
-            // 
-            // namePublisherDistributorDataGridViewTextBoxColumn
-            // 
-            this.namePublisherDistributorDataGridViewTextBoxColumn.DataPropertyName = "NamePublisherDistributor";
-            this.namePublisherDistributorDataGridViewTextBoxColumn.HeaderText = "NamePublisherDistributor";
-            this.namePublisherDistributorDataGridViewTextBoxColumn.Name = "namePublisherDistributorDataGridViewTextBoxColumn";
-            // 
-            // informationAboutFunctionsPublisherDataGridViewTextBoxColumn
-            // 
-            this.informationAboutFunctionsPublisherDataGridViewTextBoxColumn.DataPropertyName = "InformationAboutFunctionsPublisher";
-            this.informationAboutFunctionsPublisherDataGridViewTextBoxColumn.HeaderText = "InformationAboutFunctionsPublisher";
-            this.informationAboutFunctionsPublisherDataGridViewTextBoxColumn.Name = "informationAboutFunctionsPublisherDataGridViewTextBoxColumn";
-            // 
-            // datePublicationDataGridViewTextBoxColumn
-            // 
-            this.datePublicationDataGridViewTextBoxColumn.DataPropertyName = "DatePublication";
-            this.datePublicationDataGridViewTextBoxColumn.HeaderText = "DatePublication";
-            this.datePublicationDataGridViewTextBoxColumn.Name = "datePublicationDataGridViewTextBoxColumn";
-            // 
-            // placeManufactureDataGridViewTextBoxColumn
-            // 
-            this.placeManufactureDataGridViewTextBoxColumn.DataPropertyName = "PlaceManufacture";
-            this.placeManufactureDataGridViewTextBoxColumn.HeaderText = "PlaceManufacture";
-            this.placeManufactureDataGridViewTextBoxColumn.Name = "placeManufactureDataGridViewTextBoxColumn";
-            // 
-            // manufacturerNameDataGridViewTextBoxColumn
-            // 
-            this.manufacturerNameDataGridViewTextBoxColumn.DataPropertyName = "ManufacturerName";
-            this.manufacturerNameDataGridViewTextBoxColumn.HeaderText = "ManufacturerName";
-            this.manufacturerNameDataGridViewTextBoxColumn.Name = "manufacturerNameDataGridViewTextBoxColumn";
-            // 
-            // dateManufactureDataGridViewTextBoxColumn
-            // 
-            this.dateManufactureDataGridViewTextBoxColumn.DataPropertyName = "DateManufacture";
-            this.dateManufactureDataGridViewTextBoxColumn.HeaderText = "DateManufacture";
-            this.dateManufactureDataGridViewTextBoxColumn.Name = "dateManufactureDataGridViewTextBoxColumn";
-            // 
-            // specificDesignationMaterialAndVolumeDataGridViewTextBoxColumn
-            // 
-            this.specificDesignationMaterialAndVolumeDataGridViewTextBoxColumn.DataPropertyName = "SpecificDesignationMaterialAndVolume";
-            this.specificDesignationMaterialAndVolumeDataGridViewTextBoxColumn.HeaderText = "SpecificDesignationMaterialAndVolume";
-            this.specificDesignationMaterialAndVolumeDataGridViewTextBoxColumn.Name = "specificDesignationMaterialAndVolumeDataGridViewTextBoxColumn";
-            // 
-            // otherInformationAboutPhysicalCharacteristicsDataGridViewTextBoxColumn
-            // 
-            this.otherInformationAboutPhysicalCharacteristicsDataGridViewTextBoxColumn.DataPropertyName = "OtherInformationAboutPhysicalCharacteristics";
-            this.otherInformationAboutPhysicalCharacteristicsDataGridViewTextBoxColumn.HeaderText = "OtherInformationAboutPhysicalCharacteristics";
-            this.otherInformationAboutPhysicalCharacteristicsDataGridViewTextBoxColumn.Name = "otherInformationAboutPhysicalCharacteristicsDataGridViewTextBoxColumn";
-            // 
-            // dimensionsDataGridViewTextBoxColumn
-            // 
-            this.dimensionsDataGridViewTextBoxColumn.DataPropertyName = "Dimensions";
-            this.dimensionsDataGridViewTextBoxColumn.HeaderText = "Dimensions";
-            this.dimensionsDataGridViewTextBoxColumn.Name = "dimensionsDataGridViewTextBoxColumn";
-            // 
-            // informationAccompanyingMaterialDataGridViewTextBoxColumn
-            // 
-            this.informationAccompanyingMaterialDataGridViewTextBoxColumn.DataPropertyName = "InformationAccompanyingMaterial";
-            this.informationAccompanyingMaterialDataGridViewTextBoxColumn.HeaderText = "InformationAccompanyingMaterial";
-            this.informationAccompanyingMaterialDataGridViewTextBoxColumn.Name = "informationAccompanyingMaterialDataGridViewTextBoxColumn";
-            // 
-            // titleSeriesDataGridViewTextBoxColumn
-            // 
-            this.titleSeriesDataGridViewTextBoxColumn.DataPropertyName = "TitleSeries";
-            this.titleSeriesDataGridViewTextBoxColumn.HeaderText = "TitleSeries";
-            this.titleSeriesDataGridViewTextBoxColumn.Name = "titleSeriesDataGridViewTextBoxColumn";
-            // 
-            // parallelTitleSeriesDataGridViewTextBoxColumn
-            // 
-            this.parallelTitleSeriesDataGridViewTextBoxColumn.DataPropertyName = "ParallelTitleSeries";
-            this.parallelTitleSeriesDataGridViewTextBoxColumn.HeaderText = "ParallelTitleSeries";
-            this.parallelTitleSeriesDataGridViewTextBoxColumn.Name = "parallelTitleSeriesDataGridViewTextBoxColumn";
-            // 
-            // informationPertainingTitleSeriesDataGridViewTextBoxColumn
-            // 
-            this.informationPertainingTitleSeriesDataGridViewTextBoxColumn.DataPropertyName = "InformationPertainingTitleSeries";
-            this.informationPertainingTitleSeriesDataGridViewTextBoxColumn.HeaderText = "InformationPertainingTitleSeries";
-            this.informationPertainingTitleSeriesDataGridViewTextBoxColumn.Name = "informationPertainingTitleSeriesDataGridViewTextBoxColumn";
-            // 
-            // firstInformationAboutLiabilityRelatedSeriesDataGridViewTextBoxColumn
-            // 
-            this.firstInformationAboutLiabilityRelatedSeriesDataGridViewTextBoxColumn.DataPropertyName = "FirstInformationAboutLiabilityRelatedSeries";
-            this.firstInformationAboutLiabilityRelatedSeriesDataGridViewTextBoxColumn.HeaderText = "FirstInformationAboutLiabilityRelatedSeries";
-            this.firstInformationAboutLiabilityRelatedSeriesDataGridViewTextBoxColumn.Name = "firstInformationAboutLiabilityRelatedSeriesDataGridViewTextBoxColumn";
-            // 
-            // subsequentLiabilityInformationRelatingSeriesDataGridViewTextBoxColumn
-            // 
-            this.subsequentLiabilityInformationRelatingSeriesDataGridViewTextBoxColumn.DataPropertyName = "SubsequentLiabilityInformationRelatingSeries";
-            this.subsequentLiabilityInformationRelatingSeriesDataGridViewTextBoxColumn.HeaderText = "SubsequentLiabilityInformationRelatingSeries";
-            this.subsequentLiabilityInformationRelatingSeriesDataGridViewTextBoxColumn.Name = "subsequentLiabilityInformationRelatingSeriesDataGridViewTextBoxColumn";
-            // 
-            // iSSNDataGridViewTextBoxColumn
-            // 
-            this.iSSNDataGridViewTextBoxColumn.DataPropertyName = "ISSN";
-            this.iSSNDataGridViewTextBoxColumn.HeaderText = "ISSN";
-            this.iSSNDataGridViewTextBoxColumn.Name = "iSSNDataGridViewTextBoxColumn";
-            // 
-            // issueNumberSeriesDataGridViewTextBoxColumn
-            // 
-            this.issueNumberSeriesDataGridViewTextBoxColumn.DataPropertyName = "IssueNumberSeries";
-            this.issueNumberSeriesDataGridViewTextBoxColumn.HeaderText = "IssueNumberSeries";
-            this.issueNumberSeriesDataGridViewTextBoxColumn.Name = "issueNumberSeriesDataGridViewTextBoxColumn";
-            // 
-            // iSBNDataGridViewTextBoxColumn
-            // 
-            this.iSBNDataGridViewTextBoxColumn.DataPropertyName = "ISBN";
-            this.iSBNDataGridViewTextBoxColumn.HeaderText = "ISBN";
-            this.iSBNDataGridViewTextBoxColumn.Name = "iSBNDataGridViewTextBoxColumn";
-            // 
-            // bBKDataGridViewTextBoxColumn
-            // 
-            this.bBKDataGridViewTextBoxColumn.DataPropertyName = "BBK";
-            this.bBKDataGridViewTextBoxColumn.HeaderText = "BBK";
-            this.bBKDataGridViewTextBoxColumn.Name = "bBKDataGridViewTextBoxColumn";
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            // 
-            // addDataDataGridViewTextBoxColumn
-            // 
-            this.addDataDataGridViewTextBoxColumn.DataPropertyName = "AddData";
-            this.addDataDataGridViewTextBoxColumn.HeaderText = "AddData";
-            this.addDataDataGridViewTextBoxColumn.Name = "addDataDataGridViewTextBoxColumn";
-            // 
-            // bookBindingSource
-            // 
-            this.bookBindingSource.DataMember = "Book";
-            this.bookBindingSource.DataSource = this.booksDataSet;
-            // 
-            // booksDataSet
-            // 
-            this.booksDataSet.DataSetName = "BooksDataSet";
-            this.booksDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bookTableAdapter
-            // 
-            this.bookTableAdapter.ClearBeforeFill = true;
+            this.book2TableAdapter.ClearBeforeFill = true;
             // 
             // FormSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1377, 1033);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBoxSearch);
-            this.Controls.Add(this.buttonChearch);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.label1);
             this.Name = "FormSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library (поиск)";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSearch_FormClosing);
             this.Load += new System.EventHandler(this.FormSearch_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.booksDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.book2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -529,19 +275,14 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxSearch;
-        private System.Windows.Forms.Button buttonChearch;
         private System.Windows.Forms.ComboBox comboBoxSearch;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button buttonDelete;
-       
-        private System.Windows.Forms.BindingSource booksBindingSource;
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private BooksDataSet booksDataSet;
-        private System.Windows.Forms.BindingSource bookBindingSource;
-        private BooksDataSetTableAdapters.BookTableAdapter bookTableAdapter;
+
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn authorSignDataGridViewTextBoxColumn;
@@ -582,5 +323,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn bBKDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addDataDataGridViewTextBoxColumn;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource book2BindingSource;
+        private DataSet1TableAdapters.Book2TableAdapter book2TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn38;
+        private System.Windows.Forms.Button buttonUpdate;
     }
 }

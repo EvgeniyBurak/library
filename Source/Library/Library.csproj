@@ -132,13 +132,10 @@
     <Compile Include="Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
-    <Compile Include="BooksDataSet.cs">
-      <DependentUpon>BooksDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="BooksDataSet.Designer.cs">
+    <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BooksDataSet.xsd</DependentUpon>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
@@ -185,18 +182,18 @@
     <EmbeddedResource Include="registration.resx">
       <DependentUpon>registration.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="BooksDataSet.xsc">
-      <DependentUpon>BooksDataSet.xsd</DependentUpon>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="BooksDataSet.xsd">
+    <None Include="DataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BooksDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BooksDataSet.xss">
-      <DependentUpon>BooksDataSet.xsd</DependentUpon>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
+using System.Threading;
+
 namespace Library
 {
     public partial class Authorization : Form
@@ -28,9 +30,9 @@ namespace Library
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormSearch f = new FormSearch();
-            f.Show();
-            /*MD5 md5 = System.Security.Cryptography.MD5.Create();
+           // FormSearch f = new FormSearch();
+           // f.Show();
+            MD5 md5 = System.Security.Cryptography.MD5.Create();
             byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(textBox2.Text);
             byte[] hash = md5.ComputeHash(inputBytes);
 
@@ -41,6 +43,7 @@ namespace Library
             {
                 PasswordHex.Append(hash[i].ToString("X2"));
             }
+
             SqlConnection con = new SqlConnection(@"Data Source=ЖЕНЯ-ПК;Initial Catalog=Employees;Integrated Security=True");
             SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT (*) FROM employee where  login = '"+ textBox1.Text +"' and password = '"+ PasswordHex.ToString() + "'",con);
             DataTable dt = new DataTable();
@@ -48,12 +51,13 @@ namespace Library
             if (dt.Rows[0][0].ToString() == "1") 
             {
                 this.Hide();
-                FormSearch f = new FormSearch();
-                f.Show();
+                FormSearch fe = new FormSearch();
+                fe.Show();
+               
             } else {
                 MessageBox.Show("Неверный логин или пароль");
             
-            }*/
+            }
 
         }
     }

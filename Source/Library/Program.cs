@@ -19,6 +19,7 @@ namespace Library
         public static Series SERIES = new Series();
         public static PhysicalCharacteristics PHCHARACTERISTICS = new PhysicalCharacteristics();
         public static StandardNumber STANDARDNUMBER = new StandardNumber();
+       
 
         /// <summary>
         /// The main entry point for the application.
@@ -30,11 +31,7 @@ namespace Library
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Authorization());
-
-            foreach (var process in Process.GetProcessesByName("Library"))
-            {
-                process.Kill();
-            }
+            Application.Exit();
         }
     }
 }

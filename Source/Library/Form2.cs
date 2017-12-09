@@ -18,23 +18,22 @@ namespace Library
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
-            booksBindingSource.Filter = "ISBN = \'" + textBoxSearch.Text + "\'";
+            
+            
+
+
+
 
         }
 
         private void FormSearch_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'booksDataSet.Book' table. You can move, or remove it, as needed.
-            this.bookTableAdapter.Fill(this.booksDataSet.Book);
-         
-         
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "dataSet1.Book2". При необходимости она может быть перемещена или удалена.
+            this.book2TableAdapter.Fill(this.dataSet1.Book2);
+           
 
         }
 
@@ -43,6 +42,62 @@ namespace Library
         {
             AddBook addbook = new AddBook();
             addbook.Show();
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormSearch_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Закрыть?", "Message", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                e.Cancel = false;
+                Application.ExitThread();
+            }
+        }
+
+        
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            this.book2TableAdapter.Fill(this.dataSet1.Book2);
+            book2BindingSource.Filter = null;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            if (comboBoxSearch.Text == "ISBN")
+            {
+                book2BindingSource.Filter = "ISBN = \'" + textBoxSearch.Text + "\'";
+            }
+            if (comboBoxSearch.Text.Equals("Автор"))
+            {
+                book2BindingSource.Filter = "Author = \'" + textBoxSearch.Text + "\'";
+            }
+            if (comboBoxSearch.Text.Equals("ББК"))
+            {
+                book2BindingSource.Filter = "BBK = \'" + textBoxSearch.Text + "\'";
+            }
+            if (comboBoxSearch.Text.Equals("Год издания"))
+            {
+                book2BindingSource.Filter = "DatePublication = \'" + textBoxSearch.Text + "\'";
+            }
+            if (comboBoxSearch.Text.Equals("Заглавие"))
+            {
+                book2BindingSource.Filter = "MainTitle = \'" + textBoxSearch.Text + "\'";
+            }
+            if (comboBoxSearch.Text.Equals("Издательство"))
+            {
+                book2BindingSource.Filter = "InformationOnThePublication = \'" + textBoxSearch.Text + "\'";
+            }
+
         }
     }
 }

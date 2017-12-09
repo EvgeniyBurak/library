@@ -50,26 +50,21 @@ namespace Library
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Program.SERIES = new Series(textBoxTitleSeries.Text, textBoxParallelTitleSeries.Text, textBoxInformationPertainingTitleSeries.Text,
+                textBoxFirstInformationAboutLiabilityRelatedSeries.Text, textBoxSubsequentLiabilityInformationRelatingSeries.Text, textBoxISSN.Text,
+                textBoxIssueNumberSeries.Text);
 
-            using (SqlConnection con = new SqlConnection(@"Data Source=ЖЕНЯ-ПК;Initial Catalog=Books;Integrated Security=True"))
+            Program.STANDARDNUMBER = new StandardNumber(textBoxISBN.Text, textBoxBBK.Text, textBoxPrice.Text);
+
+            using (SqlConnection con = new SqlConnection(@"Data Source=ЖЕНЯ-ПК; Initial Catalog=Books;Integrated Security=True"))
             {
                 try
                 {
-                    string sql = "INSERT INTO Book (Author, " +
-                        "AuthorSign, " +
-                        "MainTitle, " +
-                        "GeneralMaterialDesignation, " +
-                        "ParallelTitle, " +
-                        "InformationPertainingToTheTitle, " +
-                        "FirstInformationOnLiability, " +
-                        "FurtherInformationOnLiability, " +
-                        "InformationOnThePublication, " + 
-                        "ParallelInformationAboutThePublication, " +
-                        "FirstInformationOnLiabilityRelatingPublication, " +
-                        "FurtherInformationOnLiabilityRelatingPublication, " +
-                        "AdditionalInformationAboutPublication, " +
-                        "FirstInformationOnLiabilityRelatingToAdditionalInformationPublication, " +
-                        "FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication, " +
+                    string sql = "INSERT INTO Book2 (Author, AuthorSign, MainTitle, GeneralMaterialDesignation, ParallelTitle, " +
+                        "InformationPertainingToTheTitle, FirstInformationOnLiability, FurtherInformationOnLiability, " +
+                        "InformationOnThePublication, ParallelInformationAboutThePublication, FirstInformationOnLiabilityRelatingPublication, " +
+                        "FurtherInformationOnLiabilityRelatingPublication, AdditionalInformationAboutPublication, " +
+                        "FirstInformationOnLiabilityRelatingToAdditionalInformationPublication, FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication, " +
                         "PlacePublication, " +
                         "FirstPlacePublication, " +
                         "SubsequentPlacePublication, " +
@@ -79,64 +74,63 @@ namespace Library
                         "PlaceManufacture, " +
                         "ManufacturerName, " +
                         "DateManufacture, " +
+
                         "SpecificDesignationMaterialAndVolume, " +
                         "OtherInformationAboutPhysicalCharacteristics, " +
                         "Dimensions, " +
                         "InformationAccompanyingMaterial, " +
+
                         "TitleSeries, " +
-                        "ParallelTitleSeries, "+
+                        "ParallelTitleSeries, " +
                         "InformationPertainingTitleSeries, " +
                         "FirstInformationAboutLiabilityRelatedSeries, " +
                         "SubsequentLiabilityInformationRelatingSeries, " +
                         "ISSN, " +
                         "IssueNumberSeries, " +
+
                         "ISBN, " +
                         "BBK, " +
                         "Price, " +
-                        "AddData) " +
-           "VALUES (@Author, " +
-                   "@AuthorSign, " +
-                   "@MainTitle, " +
-                   "@GeneralMaterialDesignation, " +
-                   "@ParallelTitle, " +
-                   "@InformationPertainingToTheTitle, " +
-                   "@FirstInformationOnLiability, " +
-                   "@FurtherInformationOnLiability, " +
-                   "@InformationOnThePublication, " +
-                   "@ParallelInformationAboutThePublication, " +
-                   "@FirstInformationOnLiabilityRelatingPublication, " +
-                   "@FurtherInformationOnLiabilityRelatingPublication, " +
-                   "@AdditionalInformationAboutPublication, " +
-                   "@FirstInformationOnLiabilityRelatingToAdditionalInformationPublication, " +
-                   "@FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication, " +
-                   "@PlacePublication, " +
-                   "@FirstPlacePublication, " +
-                   "@SubsequentPlacePublication, " +
-                   "@NamePublisherDistributor, " +
-                   "@InformationAboutFunctionsPublisher, " +
-                   "@DatePublication, " +
-                   "@PlaceManufacture, " +
-                   "@ManufacturerName, " +
-                   "@DateManufacture, " +
-                   "@SpecificDesignationMaterialAndVolume, " +
-                   "@OtherInformationAboutPhysicalCharacteristics, " +
-                   "@Dimensions, " +
-                   "@InformationAccompanyingMaterial, " +
-                   "@TitleSeries, " +
-                   "@ParallelTitleSeries, " +
-                   "@InformationPertainingTitleSeries, " +
-                   "@FirstInformationAboutLiabilityRelatedSeries, " +
-                   "@SubsequentLiabilityInformationRelatingSeries, " +
-                   "@ISSN, " +
-                   "@IssueNumberSeries, " +
-                   "@ISBN, " +
-                   "@BBK, " +
-                   "@Price, " +
-                   "@AddData);";
+                        "AddData)" +
+
+
+                    "VALUES (@Author, @AuthorSign, @MainTitle, @GeneralMaterialDesignation, @ParallelTitle, " +
+                        "@InformationPertainingToTheTitle, @FirstInformationOnLiability, @FurtherInformationOnLiability, " +
+                        "@InformationOnThePublication, @ParallelInformationAboutThePublication, @FirstInformationOnLiabilityRelatingPublication, " +
+                        "@FurtherInformationOnLiabilityRelatingPublication, @AdditionalInformationAboutPublication, " +
+                        "@FirstInformationOnLiabilityRelatingToAdditionalInformationPublication, @FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication, " +
+                        "@PlacePublication, " +
+                        "@FirstPlacePublication, " +
+                        "@SubsequentPlacePublication, " +
+                        "@NamePublisherDistributor, " +
+                        "@InformationAboutFunctionsPublisher, " +
+                        "@DatePublication, " +
+                        "@PlaceManufacture, " +
+                        "@ManufacturerName, " +
+                        "@DateManufacture, " +
+
+                        "@SpecificDesignationMaterialAndVolume, " +
+                        "@OtherInformationAboutPhysicalCharacteristics, " +
+                        "@Dimensions, " +
+                        "@InformationAccompanyingMaterial, " +
+
+                        "@TitleSeries, " +
+                        "@ParallelTitleSeries, " +
+                        "@InformationPertainingTitleSeries, " +
+                        "@FirstInformationAboutLiabilityRelatedSeries, " +
+                        "@SubsequentLiabilityInformationRelatingSeries, " +
+                        "@ISSN, " +
+                        "@IssueNumberSeries, " +
+
+                        "@ISBN, " +
+                        "@BBK, " +
+                        "@Price, " +
+                        "@AddData);" ;
+
                     con.Open();
                     SqlCommand cmd = new SqlCommand(sql, con);
                     //создаем параметры и добавляем их в коллекцию
-                    Program.SERIES.TitleSeries = "xyi";
+                  
                     cmd.Parameters.AddWithValue("@Author", Program.HEADER.Author);
                     cmd.Parameters.AddWithValue("@AuthorSign", Program.HEADER.AuthorSign);
               
@@ -154,6 +148,7 @@ namespace Library
                     cmd.Parameters.AddWithValue("@AdditionalInformationAboutPublication", Program.PUBLICATION.AdditionalInformationAboutPublication);
                     cmd.Parameters.AddWithValue("@FirstInformationOnLiabilityRelatingToAdditionalInformationPublication", Program.PUBLICATION.FirstInformationOnLiabilityRelatingToAdditionalInformationPublication);
                     cmd.Parameters.AddWithValue("@FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication", Program.PUBLICATION.FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication);
+
                     cmd.Parameters.AddWithValue("@PlacePublication", Program.OUTPUTDATA.PlacePublication);
                     cmd.Parameters.AddWithValue("@FirstPlacePublication", Program.OUTPUTDATA.FirstPlacePublication);
                     cmd.Parameters.AddWithValue("@SubsequentPlacePublication", Program.OUTPUTDATA.SubsequentPlacePublication);
@@ -163,21 +158,24 @@ namespace Library
                     cmd.Parameters.AddWithValue("@PlaceManufacture", Program.OUTPUTDATA.PlaceManufacture);
                     cmd.Parameters.AddWithValue("@ManufacturerName", Program.OUTPUTDATA.ManufacturerName);
                     cmd.Parameters.AddWithValue("@DateManufacture", Program.OUTPUTDATA.DateManufacture);
+
                     cmd.Parameters.AddWithValue("@SpecificDesignationMaterialAndVolume", Program.PHCHARACTERISTICS.SpecificDesignationMaterialAndVolume);
                     cmd.Parameters.AddWithValue("@OtherInformationAboutPhysicalCharacteristics", Program.PHCHARACTERISTICS.OtherInformationAboutPhysicalCharacteristics);
                     cmd.Parameters.AddWithValue("@Dimensions", Program.PHCHARACTERISTICS.Dimensions);
                     cmd.Parameters.AddWithValue("@InformationAccompanyingMaterial", Program.PHCHARACTERISTICS.InformationAccompanyingMaterial);
-                    cmd.Parameters.AddWithValue("@TitleSeries", Program.SERIES.TitleSeries);//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+                    cmd.Parameters.AddWithValue("@TitleSeries", Program.SERIES.TitleSeries);        
                     cmd.Parameters.AddWithValue("@ParallelTitleSeries", Program.SERIES.ParallelTitleSeries);
                     cmd.Parameters.AddWithValue("@InformationPertainingTitleSeries", Program.SERIES.InformationPertainingTitleSeries);
                     cmd.Parameters.AddWithValue("@FirstInformationAboutLiabilityRelatedSeries", Program.SERIES.FirstInformationAboutLiabilityRelatedSeries);
                     cmd.Parameters.AddWithValue("@SubsequentLiabilityInformationRelatingSeries", Program.SERIES.SubsequentLiabilityInformationRelatingSeries);
                     cmd.Parameters.AddWithValue("@ISSN", Program.SERIES.ISSN);
                     cmd.Parameters.AddWithValue("@IssueNumberSeries", Program.SERIES.IssueNumberSeries);
+
                     cmd.Parameters.AddWithValue("@ISBN", Program.STANDARDNUMBER.ISBN);
                     cmd.Parameters.AddWithValue("@BBK", Program.STANDARDNUMBER.BBK);
                     cmd.Parameters.AddWithValue("@Price", Program.STANDARDNUMBER.Price);
-                    cmd.Parameters.AddWithValue("@AddData", DateTime.Today);
+                    cmd.Parameters.AddWithValue("@AddData", DateTime.Today.ToString());
 
                    
                     cmd.ExecuteNonQuery();
@@ -188,6 +186,7 @@ namespace Library
                 }
 
                 MessageBox.Show("Успешно добавлено");
+                
                 this.Close();
             }
 
