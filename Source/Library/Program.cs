@@ -19,7 +19,8 @@ namespace Library
         public static Series SERIES = new Series();
         public static PhysicalCharacteristics PHCHARACTERISTICS = new PhysicalCharacteristics();
         public static StandardNumber STANDARDNUMBER = new StandardNumber();
-       
+        public static int N;
+        public static int currentID;
 
         /// <summary>
         /// The main entry point for the application.
@@ -27,7 +28,7 @@ namespace Library
         [STAThread]
         static void Main()
         {
-          
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Authorization());

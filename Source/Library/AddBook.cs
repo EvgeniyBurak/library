@@ -18,6 +18,18 @@ namespace Library
         public AddBook()
         {
             InitializeComponent();
+            if (Program.N == 1)
+            {
+                this.textBoxAuthor.Text = Program.HEADER.Author.ToString();
+                this.textBoxAuthorSign.Text = Program.HEADER.AuthorSign.ToString();
+                this.textBoxMainTitle.Text = Program.TITLE.MainTitle.ToString();
+                this.textBoxGeneralMaterialDesignation.Text = Program.TITLE.GeneralMaterialDesignation.ToString();
+                this.textBoxParallelTitle.Text = Program.TITLE.ParallelTitle.ToString();
+                this.textBoxInformationPertainingToTheTitle.Text = Program.TITLE.InformationPertainingToTheTitle.ToString();
+                this.textBoxFirstInformationOnLiability.Text = Program.TITLE.FirstInformationOnLiability.ToString();
+                this.textBoxFurtherInformationOnLiability.Text = Program.TITLE.FurtherInformationOnLiability.ToString();
+
+            }
         }
 
         public void button1_Click(object sender, EventArgs e)

@@ -57,6 +57,7 @@
             this.label44 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonSaveForm2 = new System.Windows.Forms.Button();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -364,12 +365,28 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // buttonSaveForm2
+            // 
+            this.buttonSaveForm2.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSaveForm2.ForeColor = System.Drawing.Color.Navy;
+            this.buttonSaveForm2.Image = ((System.Drawing.Image)(resources.GetObject("buttonSaveForm2.Image")));
+            this.buttonSaveForm2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonSaveForm2.Location = new System.Drawing.Point(884, 561);
+            this.buttonSaveForm2.Name = "buttonSaveForm2";
+            this.buttonSaveForm2.Size = new System.Drawing.Size(171, 59);
+            this.buttonSaveForm2.TabIndex = 37;
+            this.buttonSaveForm2.Text = "Сохранить";
+            this.buttonSaveForm2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonSaveForm2.UseVisualStyleBackColor = true;
+            this.buttonSaveForm2.Click += new System.EventHandler(this.buttonSaveForm2_Click);
+            // 
             // AddBook2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1232, 653);
+            this.Controls.Add(this.buttonSaveForm2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.panel11);
@@ -420,5 +437,6 @@
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonSaveForm2;
     }
 }

@@ -10,6 +10,7 @@ namespace Library
 {
     class Book
     {
+        
         public Header header;
         public Title title;
         public Publication publication;
