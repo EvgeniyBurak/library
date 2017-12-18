@@ -10,35 +10,47 @@ namespace Library
             InitializeComponent();
         }
 
-        void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            Program.OUTPUTDATA = new OutputData(textBoxPlacePublication.Text, textBoxFirstPlacePublication.Text, textBoxSubsequentPlacePublication.Text,
-                textBoxNamePublisherDistributor.Text, textBoxInformationAboutFunctionsPublisher.Text, textBoxDatePublication.Text,
+            Program.OUTPUTDATA = new OutputData(textBoxPlacePublication.Text, textBoxFirstPlacePublication.Text,
+                textBoxSubsequentPlacePublication.Text,
+                textBoxNamePublisherDistributor.Text, textBoxInformationAboutFunctionsPublisher.Text,
+                textBoxDatePublication.Text,
                 textBoxPlaceManufacture.Text, textBoxManufacturerName.Text, textBoxDateManufacture.Text);
 
-            Program.PHCHARACTERISTICS = new PhysicalCharacteristics(textBoxSpecificDesignationMaterialAndVolume.Text, textBoxOtherInformationAboutPhysicalCharacteristics.Text,
+            Program.PHCHARACTERISTICS = new PhysicalCharacteristics(textBoxSpecificDesignationMaterialAndVolume.Text,
+                textBoxOtherInformationAboutPhysicalCharacteristics.Text,
                 textBoxDimensions.Text, textBoxInformationAccompanyingMaterial.Text);
             Close();
 
             var addbook0 = new AddBook0();
-            addbook0.textBoxAdditionalInformationAboutPublication.Text = Program.PUBLICATION.InformationOnThePublication;
-            addbook0.textBoxFirstInformationOnLiabilityRelatingPublication.Text = Program.PUBLICATION.FirstInformationOnLiabilityRelatingPublication;
-            addbook0.textBoxFirstInformationOnLiabilityRelatingToAdditionalInformationPublication.Text = Program.PUBLICATION.FirstInformationOnLiabilityRelatingToAdditionalInformationPublication;
-            addbook0.textBoxFurtherInformationOnLiabilityRelatingPublication.Text = Program.PUBLICATION.FurtherInformationOnLiabilityRelatingPublication;
-            addbook0.textBoxFurtherInformationOnLiabilityRelatingToAdditionalInformationPublication.Text = Program.PUBLICATION.FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication;
+            addbook0.textBoxAdditionalInformationAboutPublication.Text =
+                Program.PUBLICATION.InformationOnThePublication;
+            addbook0.textBoxFirstInformationOnLiabilityRelatingPublication.Text =
+                Program.PUBLICATION.FirstInformationOnLiabilityRelatingPublication;
+            addbook0.textBoxFirstInformationOnLiabilityRelatingToAdditionalInformationPublication.Text =
+                Program.PUBLICATION.FirstInformationOnLiabilityRelatingToAdditionalInformationPublication;
+            addbook0.textBoxFurtherInformationOnLiabilityRelatingPublication.Text =
+                Program.PUBLICATION.FurtherInformationOnLiabilityRelatingPublication;
+            addbook0.textBoxFurtherInformationOnLiabilityRelatingToAdditionalInformationPublication.Text = Program
+                .PUBLICATION.FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication;
             addbook0.textBoxInformationOnThePublication.Text = Program.PUBLICATION.InformationOnThePublication;
-            addbook0.textBoxParallelInformationAboutThePublication.Text = Program.PUBLICATION.ParallelInformationAboutThePublication;
+            addbook0.textBoxParallelInformationAboutThePublication.Text =
+                Program.PUBLICATION.ParallelInformationAboutThePublication;
 
             addbook0.Show();
         }
 
-        void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Program.OUTPUTDATA = new OutputData(textBoxPlacePublication.Text, textBoxFirstPlacePublication.Text, textBoxSubsequentPlacePublication.Text,
-               textBoxNamePublisherDistributor.Text, textBoxInformationAboutFunctionsPublisher.Text, textBoxDatePublication.Text,
-               textBoxPlaceManufacture.Text, textBoxManufacturerName.Text, textBoxDateManufacture.Text);
+            Program.OUTPUTDATA = new OutputData(textBoxPlacePublication.Text, textBoxFirstPlacePublication.Text,
+                textBoxSubsequentPlacePublication.Text,
+                textBoxNamePublisherDistributor.Text, textBoxInformationAboutFunctionsPublisher.Text,
+                textBoxDatePublication.Text,
+                textBoxPlaceManufacture.Text, textBoxManufacturerName.Text, textBoxDateManufacture.Text);
 
-            Program.PHCHARACTERISTICS = new PhysicalCharacteristics(textBoxSpecificDesignationMaterialAndVolume.Text, textBoxOtherInformationAboutPhysicalCharacteristics.Text,
+            Program.PHCHARACTERISTICS = new PhysicalCharacteristics(textBoxSpecificDesignationMaterialAndVolume.Text,
+                textBoxOtherInformationAboutPhysicalCharacteristics.Text,
                 textBoxDimensions.Text, textBoxInformationAccompanyingMaterial.Text);
 
             Close();
@@ -49,12 +61,14 @@ namespace Library
             addbook2.textBoxCOP.Text = Program.STANDARDNUMBER.Pric.COP.ToString();
 
             addbook2.textBoxTitleSeries.Text = Program.SERIES.TitleSeries;
-            addbook2.textBoxFirstInformationAboutLiabilityRelatedSeries.Text = Program.SERIES.FirstInformationAboutLiabilityRelatedSeries;
+            addbook2.textBoxFirstInformationAboutLiabilityRelatedSeries.Text =
+                Program.SERIES.FirstInformationAboutLiabilityRelatedSeries;
             addbook2.textBoxInformationPertainingTitleSeries.Text = Program.SERIES.InformationPertainingTitleSeries;
             addbook2.textBoxISSN.Text = Program.SERIES.ISSN;
             addbook2.textBoxIssueNumberSeries.Text = Program.SERIES.IssueNumberSeries;
             addbook2.textBoxParallelTitleSeries.Text = Program.SERIES.ParallelTitleSeries;
-            addbook2.textBoxSubsequentLiabilityInformationRelatingSeries.Text = Program.SERIES.SubsequentLiabilityInformationRelatingSeries;
+            addbook2.textBoxSubsequentLiabilityInformationRelatingSeries.Text =
+                Program.SERIES.SubsequentLiabilityInformationRelatingSeries;
 
             addbook2.Show();
         }

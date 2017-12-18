@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace Library
 {
-    static class Program
+    internal static class Program
     {
         public static Header HEADER = new Header();
         public static Title TITLE = new Title();
@@ -16,10 +16,10 @@ namespace Library
         public static int currentID;
 
         /// <summary>
-        /// The main entry point for the application.
+        ///     The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

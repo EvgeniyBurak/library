@@ -2,25 +2,24 @@
 
 namespace Library
 {
-    struct Price
+    internal struct Price
     {
         public int RUB { get; set; }
         public int COP { get; set; }
     }
-    class Book
+
+    internal class Book
     {
         public Header header;
-        public Title title;
-        public Publication publication;
         public OutputData outputdata;
-        public Series series;
         public PhysicalCharacteristics physicalCharac;
+        public Publication publication;
+        public Series series;
         public StandardNumber standardNumber;
-
-        public Book() { }
+        public Title title;
     }
 
-    class Header
+    internal class Header
     {
         public string Author;
         public string AuthorSign;
@@ -30,6 +29,7 @@ namespace Library
             Author = "";
             AuthorSign = "";
         }
+
         public Header(string author, string authorSign)
         {
             Author = author;
@@ -44,7 +44,7 @@ namespace Library
                 return Author;
             }
 
-            set { Author = value; }
+            set => Author = value;
         }
 
         public string GetSetAuthorSign
@@ -55,30 +55,25 @@ namespace Library
                 return AuthorSign;
             }
 
-            set { AuthorSign = value; }
+            set => AuthorSign = value;
         }
 
         internal Book Book
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+            get { throw new NotImplementedException(); }
 
-            set
-            {
-            }
+            set { }
         }
     }
 
-    class Title
+    internal class Title
     {
-        public string MainTitle;
-        public string GeneralMaterialDesignation;
-        public string ParallelTitle;
-        public string InformationPertainingToTheTitle;
         public string FirstInformationOnLiability;
         public string FurtherInformationOnLiability;
+        public string GeneralMaterialDesignation;
+        public string InformationPertainingToTheTitle;
+        public string MainTitle;
+        public string ParallelTitle;
 
         public Title()
         {
@@ -90,7 +85,9 @@ namespace Library
             FurtherInformationOnLiability = "";
         }
 
-        public Title(string MainTitle, string GeneralMaterialDesignation, string ParallelTitle, string InformationPertainingToTheTitle, string FirstInformationOnLiability, string FurtherInformationOnLiability)
+        public Title(string MainTitle, string GeneralMaterialDesignation, string ParallelTitle,
+            string InformationPertainingToTheTitle, string FirstInformationOnLiability,
+            string FurtherInformationOnLiability)
         {
             this.MainTitle = MainTitle;
             this.GeneralMaterialDesignation = GeneralMaterialDesignation;
@@ -108,8 +105,9 @@ namespace Library
                 return MainTitle;
             }
 
-            set { MainTitle = value; }
+            set => MainTitle = value;
         }
+
         public string GetSetGeneralMaterialDesignation
         {
             get
@@ -119,8 +117,9 @@ namespace Library
                 return GeneralMaterialDesignation;
             }
 
-            set { GeneralMaterialDesignation = value; }
+            set => GeneralMaterialDesignation = value;
         }
+
         public string GetSetParallelTitle
         {
             get
@@ -129,8 +128,9 @@ namespace Library
                 return ParallelTitle;
             }
 
-            set { ParallelTitle = value; }
+            set => ParallelTitle = value;
         }
+
         public string GetSetInformationPertainingToTheTitle
         {
             get
@@ -140,8 +140,9 @@ namespace Library
                 return InformationPertainingToTheTitle;
             }
 
-            set { InformationPertainingToTheTitle = value; }
+            set => InformationPertainingToTheTitle = value;
         }
+
         public string GetSetFirstInformationOnLiability
         {
             get
@@ -151,8 +152,9 @@ namespace Library
                 return FirstInformationOnLiability;
             }
 
-            set { FirstInformationOnLiability = value; }
+            set => FirstInformationOnLiability = value;
         }
+
         public string GetSetFurtherInformationOnLiability
         {
             get
@@ -162,44 +164,46 @@ namespace Library
                 return FurtherInformationOnLiability;
             }
 
-            set { FurtherInformationOnLiability = value; }
+            set => FurtherInformationOnLiability = value;
         }
 
         internal Book Book
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+            get { throw new NotImplementedException(); }
 
-            set
-            {
-            }
+            set { }
         }
     }
 
-    class Publication
+    internal class Publication
     {
+        public string AdditionalInformationAboutPublication;
+        public string FirstInformationOnLiabilityRelatingPublication;
+        public string FirstInformationOnLiabilityRelatingToAdditionalInformationPublication;
+        public string FurtherInformationOnLiabilityRelatingPublication;
+        public string FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication;
         public string InformationOnThePublication;
         public string ParallelInformationAboutThePublication;
-        public string FirstInformationOnLiabilityRelatingPublication;
-        public string FurtherInformationOnLiabilityRelatingPublication;
-        public string AdditionalInformationAboutPublication;
-        public string FirstInformationOnLiabilityRelatingToAdditionalInformationPublication;
-        public string FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication;
 
-        public Publication() { }
+        public Publication()
+        {
+        }
 
-        public Publication(string InformationOnThePublication, string ParallelInformationAboutThePublication, string FirstInformationOnLiabilityRelatingPublication,
-            string FurtherInformationOnLiabilityRelatingPublication, string AdditionalInformationAboutPublication, string FirstInformationOnLiabilityRelatingToAdditionalInformationPublication, string FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication)
+        public Publication(string InformationOnThePublication, string ParallelInformationAboutThePublication,
+            string FirstInformationOnLiabilityRelatingPublication,
+            string FurtherInformationOnLiabilityRelatingPublication, string AdditionalInformationAboutPublication,
+            string FirstInformationOnLiabilityRelatingToAdditionalInformationPublication,
+            string FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication)
         {
             this.InformationOnThePublication = InformationOnThePublication;
             this.ParallelInformationAboutThePublication = ParallelInformationAboutThePublication;
             this.FirstInformationOnLiabilityRelatingPublication = FirstInformationOnLiabilityRelatingPublication;
             this.FurtherInformationOnLiabilityRelatingPublication = FurtherInformationOnLiabilityRelatingPublication;
             this.AdditionalInformationAboutPublication = AdditionalInformationAboutPublication;
-            this.FirstInformationOnLiabilityRelatingToAdditionalInformationPublication = FirstInformationOnLiabilityRelatingToAdditionalInformationPublication;
-            this.FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication = FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication;
+            this.FirstInformationOnLiabilityRelatingToAdditionalInformationPublication =
+                FirstInformationOnLiabilityRelatingToAdditionalInformationPublication;
+            this.FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication =
+                FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication;
         }
 
         public string GetSetInformationOnThePublication
@@ -211,7 +215,7 @@ namespace Library
                 return InformationOnThePublication;
             }
 
-            set { InformationOnThePublication = value; }
+            set => InformationOnThePublication = value;
         }
 
         public string GetSetParallelInformationAboutThePublication
@@ -223,8 +227,9 @@ namespace Library
                 return ParallelInformationAboutThePublication;
             }
 
-            set { ParallelInformationAboutThePublication = value; }
+            set => ParallelInformationAboutThePublication = value;
         }
+
         public string GetSetFirstInformationOnLiabilityRelatingPublication
         {
             get
@@ -234,8 +239,9 @@ namespace Library
                 return FirstInformationOnLiabilityRelatingPublication;
             }
 
-            set { FirstInformationOnLiabilityRelatingPublication = value; }
+            set => FirstInformationOnLiabilityRelatingPublication = value;
         }
+
         public string GetSetFurtherInformationOnLiabilityRelatingPublication
         {
             get
@@ -245,8 +251,9 @@ namespace Library
                 return FurtherInformationOnLiabilityRelatingPublication;
             }
 
-            set { FurtherInformationOnLiabilityRelatingPublication = value; }
+            set => FurtherInformationOnLiabilityRelatingPublication = value;
         }
+
         public string GetSetAdditionalInformationAboutPublication
         {
             get
@@ -256,8 +263,9 @@ namespace Library
                 return AdditionalInformationAboutPublication;
             }
 
-            set { AdditionalInformationAboutPublication = value; }
+            set => AdditionalInformationAboutPublication = value;
         }
+
         public string GetSetFirstInformationOnLiabilityRelatingToAdditionalInformationPpublication
         {
             get
@@ -267,8 +275,9 @@ namespace Library
                 return FirstInformationOnLiabilityRelatingToAdditionalInformationPublication;
             }
 
-            set { FirstInformationOnLiabilityRelatingToAdditionalInformationPublication = value; }
+            set => FirstInformationOnLiabilityRelatingToAdditionalInformationPublication = value;
         }
+
         public string GetSetFurtherInformationOnLiabilityRelatingToAdditionalInformationPublication
         {
             get
@@ -278,36 +287,35 @@ namespace Library
                 return FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication;
             }
 
-            set { FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication = value; }
+            set => FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication = value;
         }
 
         internal Book Book
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+            get { throw new NotImplementedException(); }
 
-            set
-            {
-            }
+            set { }
         }
     }
 
-    class OutputData
+    internal class OutputData
     {
-        public string PlacePublication;
-        public string FirstPlacePublication;
-        public string SubsequentPlacePublication;
-        public string NamePublisherDistributor;
-        public string InformationAboutFunctionsPublisher;
-        public string DatePublication;
-        public string PlaceManufacture;
-        public string ManufacturerName;
         public string DateManufacture;
+        public string DatePublication;
+        public string FirstPlacePublication;
+        public string InformationAboutFunctionsPublisher;
+        public string ManufacturerName;
+        public string NamePublisherDistributor;
+        public string PlaceManufacture;
+        public string PlacePublication;
+        public string SubsequentPlacePublication;
 
-        public OutputData() { }
-        public OutputData(string PlacePublication, string FirstPlacePublication, string SubsequentPlacePublication, string NamePublisherDistributor, string InformationAboutFunctionsPublisher,
+        public OutputData()
+        {
+        }
+
+        public OutputData(string PlacePublication, string FirstPlacePublication, string SubsequentPlacePublication,
+            string NamePublisherDistributor, string InformationAboutFunctionsPublisher,
             string DatePublication, string PlaceManufacture, string ManufacturerName, string DateManufacture)
         {
             this.PlacePublication = PlacePublication;
@@ -323,27 +331,25 @@ namespace Library
 
         internal Book Book
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+            get { throw new NotImplementedException(); }
 
-            set
-            {
-            }
+            set { }
         }
     }
 
-    class PhysicalCharacteristics
+    internal class PhysicalCharacteristics
     {
-        public string SpecificDesignationMaterialAndVolume;
-        public string OtherInformationAboutPhysicalCharacteristics;
         public string Dimensions;
         public string InformationAccompanyingMaterial;
+        public string OtherInformationAboutPhysicalCharacteristics;
+        public string SpecificDesignationMaterialAndVolume;
 
-        public PhysicalCharacteristics() { }
+        public PhysicalCharacteristics()
+        {
+        }
 
-        public PhysicalCharacteristics(string SpecificDesignationMaterialAndVolume, string OtherInformationAboutPhysicalCharacteristics,
+        public PhysicalCharacteristics(string SpecificDesignationMaterialAndVolume,
+            string OtherInformationAboutPhysicalCharacteristics,
             string Dimensions, string InformationAccompanyingMaterial)
         {
             this.SpecificDesignationMaterialAndVolume = SpecificDesignationMaterialAndVolume;
@@ -354,30 +360,28 @@ namespace Library
 
         internal Book Book
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+            get { throw new NotImplementedException(); }
 
-            set
-            {
-            }
+            set { }
         }
     }
 
-    class Series
+    internal class Series
     {
-        public string TitleSeries;
-        public string ParallelTitleSeries;
-        public string InformationPertainingTitleSeries;
         public string FirstInformationAboutLiabilityRelatedSeries;
-        public string SubsequentLiabilityInformationRelatingSeries;
+        public string InformationPertainingTitleSeries;
         public string ISSN;
         public string IssueNumberSeries;
+        public string ParallelTitleSeries;
+        public string SubsequentLiabilityInformationRelatingSeries;
+        public string TitleSeries;
 
-        public Series() { }
+        public Series()
+        {
+        }
 
-        public Series(string TitleSeries, string ParallelTitleSeries, string InformationPertainingTitleSeries, string FirstInformationAboutLiabilityRelatedSeries,
+        public Series(string TitleSeries, string ParallelTitleSeries, string InformationPertainingTitleSeries,
+            string FirstInformationAboutLiabilityRelatedSeries,
             string SubsequentLiabilityInformationRelatingSeries, string ISSN, string IssueNumberSeries)
         {
             this.TitleSeries = TitleSeries;
@@ -391,44 +395,36 @@ namespace Library
 
         internal Book Book
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+            get { throw new NotImplementedException(); }
 
-            set
-            {
-            }
+            set { }
         }
     }
 
-    class StandardNumber
+    internal class StandardNumber
     {
-        public string ISBN;
         public string BBK;
+        public string ISBN;
         public Price Pric;
         public decimal Price;
 
-        public StandardNumber() { }
+        public StandardNumber()
+        {
+        }
 
         public StandardNumber(string ISBN, string BBK, Price Pric)
         {
             this.ISBN = ISBN;
             this.BBK = BBK;
             this.Pric = Pric;
-            Price = (decimal)((Convert.ToDouble(Pric.RUB)) + (Convert.ToDouble(Pric.COP) / 100));
+            Price = (decimal) (Convert.ToDouble(Pric.RUB) + Convert.ToDouble(Pric.COP) / 100);
         }
 
         internal Book Book
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+            get { throw new NotImplementedException(); }
 
-            set
-            {
-            }
+            set { }
         }
     }
 }

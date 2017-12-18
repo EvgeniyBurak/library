@@ -20,10 +20,12 @@ namespace Library
             }
         }
 
-        void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            Program.SERIES = new Series(textBoxTitleSeries.Text, textBoxParallelTitleSeries.Text, textBoxInformationPertainingTitleSeries.Text,
-                textBoxFirstInformationAboutLiabilityRelatedSeries.Text, textBoxSubsequentLiabilityInformationRelatingSeries.Text, textBoxISSN.Text,
+            Program.SERIES = new Series(textBoxTitleSeries.Text, textBoxParallelTitleSeries.Text,
+                textBoxInformationPertainingTitleSeries.Text,
+                textBoxFirstInformationAboutLiabilityRelatedSeries.Text,
+                textBoxSubsequentLiabilityInformationRelatingSeries.Text, textBoxISSN.Text,
                 textBoxIssueNumberSeries.Text);
 
             var price = new Price
@@ -40,24 +42,30 @@ namespace Library
             addbook1.textBoxFirstPlacePublication.Text = Program.OUTPUTDATA.FirstPlacePublication;
             addbook1.textBoxSubsequentPlacePublication.Text = Program.OUTPUTDATA.SubsequentPlacePublication;
             addbook1.textBoxNamePublisherDistributor.Text = Program.OUTPUTDATA.NamePublisherDistributor;
-            addbook1.textBoxInformationAboutFunctionsPublisher.Text = Program.OUTPUTDATA.InformationAboutFunctionsPublisher;
+            addbook1.textBoxInformationAboutFunctionsPublisher.Text =
+                Program.OUTPUTDATA.InformationAboutFunctionsPublisher;
             addbook1.textBoxDatePublication.Text = Program.OUTPUTDATA.DatePublication;
             addbook1.textBoxPlaceManufacture.Text = Program.OUTPUTDATA.PlaceManufacture;
             addbook1.textBoxManufacturerName.Text = Program.OUTPUTDATA.ManufacturerName;
             addbook1.textBoxDateManufacture.Text = Program.OUTPUTDATA.DateManufacture;
 
-            addbook1.textBoxSpecificDesignationMaterialAndVolume.Text = Program.PHCHARACTERISTICS.SpecificDesignationMaterialAndVolume;
-            addbook1.textBoxOtherInformationAboutPhysicalCharacteristics.Text = Program.PHCHARACTERISTICS.OtherInformationAboutPhysicalCharacteristics;
+            addbook1.textBoxSpecificDesignationMaterialAndVolume.Text =
+                Program.PHCHARACTERISTICS.SpecificDesignationMaterialAndVolume;
+            addbook1.textBoxOtherInformationAboutPhysicalCharacteristics.Text =
+                Program.PHCHARACTERISTICS.OtherInformationAboutPhysicalCharacteristics;
             addbook1.textBoxDimensions.Text = Program.PHCHARACTERISTICS.Dimensions;
-            addbook1.textBoxInformationAccompanyingMaterial.Text = Program.PHCHARACTERISTICS.InformationAccompanyingMaterial;
+            addbook1.textBoxInformationAccompanyingMaterial.Text =
+                Program.PHCHARACTERISTICS.InformationAccompanyingMaterial;
 
             addbook1.Show();
         }
 
-        void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Program.SERIES = new Series(textBoxTitleSeries.Text, textBoxParallelTitleSeries.Text, textBoxInformationPertainingTitleSeries.Text,
-                textBoxFirstInformationAboutLiabilityRelatedSeries.Text, textBoxSubsequentLiabilityInformationRelatingSeries.Text, textBoxISSN.Text,
+            Program.SERIES = new Series(textBoxTitleSeries.Text, textBoxParallelTitleSeries.Text,
+                textBoxInformationPertainingTitleSeries.Text,
+                textBoxFirstInformationAboutLiabilityRelatedSeries.Text,
+                textBoxSubsequentLiabilityInformationRelatingSeries.Text, textBoxISSN.Text,
                 textBoxIssueNumberSeries.Text);
 
             var price = new Price
@@ -70,22 +78,20 @@ namespace Library
 
             var DB = new DataBaseClass();
             if (DB.Insert())
-            {
                 MessageBox.Show("Успешно добавлено");
-            }
             else
-            {
                 MessageBox.Show("Произошла ошибка при добавлении");
-            }
 
             Close();
         }
 
-        void buttonSaveForm2_Click(object sender, EventArgs e)
+        private void buttonSaveForm2_Click(object sender, EventArgs e)
         {
-            Program.SERIES = new Series(textBoxTitleSeries.Text, textBoxParallelTitleSeries.Text, textBoxInformationPertainingTitleSeries.Text,
-              textBoxFirstInformationAboutLiabilityRelatedSeries.Text, textBoxSubsequentLiabilityInformationRelatingSeries.Text, textBoxISSN.Text,
-              textBoxIssueNumberSeries.Text);
+            Program.SERIES = new Series(textBoxTitleSeries.Text, textBoxParallelTitleSeries.Text,
+                textBoxInformationPertainingTitleSeries.Text,
+                textBoxFirstInformationAboutLiabilityRelatedSeries.Text,
+                textBoxSubsequentLiabilityInformationRelatingSeries.Text, textBoxISSN.Text,
+                textBoxIssueNumberSeries.Text);
             var price = new Price
             {
                 RUB = Convert.ToInt32(textBoxRUB.Text),
@@ -96,13 +102,9 @@ namespace Library
             var DB = new DataBaseClass();
 
             if (DB.Update(Program.currentID))
-            {
                 MessageBox.Show("Успешно обновлено");
-            }
             else
-            {
                 MessageBox.Show("Произошла ошибка при обновлении");
-            }
 
             Close();
         }

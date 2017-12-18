@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 
@@ -12,36 +13,38 @@ namespace Library
             InitializeComponent();
         }
 
-        void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             var f1 = new Authorization();
             f1.Show();
         }
 
-        void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(@"Data Source=ЖЕНЯ-ПК;Initial Catalog=Employees;Integrated Security=True"))
+            using (var con =
+                new SqlConnection(@"Data Source=ЖЕНЯ-ПК;Initial Catalog=Employees;Integrated Security=True"))
             {
                 try
                 {
-                    var sql = "INSERT INTO employee (name, surname, middleName, login, password)" + "VALUES (@name, @surname, @middleName, @login, @password);";
+                    var sql = "INSERT INTO employee (name, surname, middleName, login, password)" +
+                              "VALUES (@name, @surname, @middleName, @login, @password);";
                     con.Open();
                     var cmd = new SqlCommand(sql, con);
                     // создаем параметры и добавляем их в коллекцию
 
-                    var name = textBoxName.Text.ToString();
-                    var surname = textBoxSurname.Text.ToString();
-                    var middleName = textBoxSecondName.Text.ToString();
-                    var login = textBoxLogin.Text.ToString();
-                    var password = textBoxPassword.Text.ToString();
+                    var name = textBoxName.Text;
+                    var surname = textBoxSurname.Text;
+                    var middleName = textBoxSecondName.Text;
+                    var login = textBoxLogin.Text;
+                    var password = textBoxPassword.Text;
 
-                    var md5 = System.Security.Cryptography.MD5.Create();
-                    byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(password);
-                    byte[] hash = md5.ComputeHash(inputBytes);
+                    var md5 = MD5.Create();
+                    var inputBytes = Encoding.ASCII.GetBytes(password);
+                    var hash = md5.ComputeHash(inputBytes);
 
                     var PasswordHex = new StringBuilder();
 
-                    for (int i = 0; i < hash.Length; i++)
+                    for (var i = 0; i < hash.Length; i++)
                         PasswordHex.Append(hash[i].ToString("X2"));
 
                     cmd.Parameters.AddWithValue("@name", name);
