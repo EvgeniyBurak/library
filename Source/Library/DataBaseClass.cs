@@ -64,7 +64,7 @@ namespace Library
                               "', ISBN='" + Program.STANDARDNUMBER.ISBN +
                               "', BBK='" + Program.STANDARDNUMBER.BBK +
                               "', Price=" + Program.STANDARDNUMBER.Price +
-                              "' WHERE id='" + iD + "';";
+                              " WHERE id='" + iD + "';";
 
                     con.Open();
                     var cmd = new SqlCommand(sql, con);
