@@ -34,6 +34,7 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.comboBoxSearch = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonEdit = new System.Windows.Forms.Button();
             this.button_Save = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
@@ -97,7 +98,15 @@
             this.booksDataSet = new Library.BooksDataSet();
             this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.book2TableAdapter1 = new Library.BooksDataSetTableAdapters.Book2TableAdapter();
-            this.buttonEdit = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.book2BindingSource)).BeginInit();
@@ -106,13 +115,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.book2BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 90);
+            this.label1.Location = new System.Drawing.Point(12, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(200, 31);
             this.label1.TabIndex = 0;
@@ -120,7 +131,7 @@
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(12, 135);
+            this.textBoxSearch.Location = new System.Drawing.Point(465, 27);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(303, 22);
             this.textBoxSearch.TabIndex = 1;
@@ -135,7 +146,7 @@
             "Год издания",
             "Заглавие",
             "Издательство"});
-            this.comboBoxSearch.Location = new System.Drawing.Point(342, 135);
+            this.comboBoxSearch.Location = new System.Drawing.Point(137, 23);
             this.comboBoxSearch.Name = "comboBoxSearch";
             this.comboBoxSearch.Size = new System.Drawing.Size(121, 24);
             this.comboBoxSearch.TabIndex = 3;
@@ -144,6 +155,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.buttonEdit);
             this.panel1.Controls.Add(this.button_Save);
             this.panel1.Controls.Add(this.buttonUpdate);
@@ -154,13 +166,28 @@
             this.panel1.Size = new System.Drawing.Size(1342, 65);
             this.panel1.TabIndex = 5;
             // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEdit.ForeColor = System.Drawing.Color.Navy;
+            this.buttonEdit.Image = ((System.Drawing.Image)(resources.GetObject("buttonEdit.Image")));
+            this.buttonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEdit.Location = new System.Drawing.Point(232, 3);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(206, 59);
+            this.buttonEdit.TabIndex = 5;
+            this.buttonEdit.Text = "Редактировать";
+            this.buttonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            // 
             // button_Save
             // 
             this.button_Save.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Save.ForeColor = System.Drawing.Color.Navy;
             this.button_Save.Image = ((System.Drawing.Image)(resources.GetObject("button_Save.Image")));
             this.button_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Save.Location = new System.Drawing.Point(652, 3);
+            this.button_Save.Location = new System.Drawing.Point(669, 3);
             this.button_Save.Name = "button_Save";
             this.button_Save.Size = new System.Drawing.Size(165, 59);
             this.button_Save.TabIndex = 4;
@@ -175,7 +202,7 @@
             this.buttonUpdate.ForeColor = System.Drawing.Color.Navy;
             this.buttonUpdate.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdate.Image")));
             this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUpdate.Location = new System.Drawing.Point(444, 3);
+            this.buttonUpdate.Location = new System.Drawing.Point(857, 3);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(165, 59);
             this.buttonUpdate.TabIndex = 3;
@@ -190,7 +217,7 @@
             this.buttonDelete.ForeColor = System.Drawing.Color.Navy;
             this.buttonDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelete.Image")));
             this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDelete.Location = new System.Drawing.Point(241, 3);
+            this.buttonDelete.Location = new System.Drawing.Point(472, 3);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(165, 59);
             this.buttonDelete.TabIndex = 2;
@@ -220,9 +247,9 @@
             this.button2.ForeColor = System.Drawing.Color.Navy;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(492, 100);
+            this.button2.Location = new System.Drawing.Point(827, 8);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 59);
+            this.button2.Size = new System.Drawing.Size(162, 59);
             this.button2.TabIndex = 0;
             this.button2.Text = "Поиск";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -243,7 +270,7 @@
             this.dataGridViewTextBoxColumn37,
             this.dataGridViewTextBoxColumn38});
             this.dataGridView1.DataSource = this.book2BindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 192);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 246);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1342, 331);
@@ -327,7 +354,7 @@
             // 
             // richTextBoxBook
             // 
-            this.richTextBoxBook.Location = new System.Drawing.Point(12, 610);
+            this.richTextBoxBook.Location = new System.Drawing.Point(12, 602);
             this.richTextBoxBook.Name = "richTextBoxBook";
             this.richTextBoxBook.Size = new System.Drawing.Size(506, 156);
             this.richTextBoxBook.TabIndex = 7;
@@ -379,10 +406,10 @@
             this.dataGridViewTextBoxColumn46,
             this.dataGridViewTextBoxColumn47});
             this.dataGridView2.DataSource = this.book2BindingSource1;
-            this.dataGridView2.Location = new System.Drawing.Point(599, 591);
+            this.dataGridView2.Location = new System.Drawing.Point(581, 602);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(725, 186);
+            this.dataGridView2.Size = new System.Drawing.Size(773, 186);
             this.dataGridView2.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn1
@@ -645,34 +672,111 @@
             // 
             this.book2TableAdapter1.ClearBeforeFill = true;
             // 
-            // buttonEdit
+            // button1
             // 
-            this.buttonEdit.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEdit.ForeColor = System.Drawing.Color.Navy;
-            this.buttonEdit.Image = ((System.Drawing.Image)(resources.GetObject("buttonEdit.Image")));
-            this.buttonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEdit.Location = new System.Drawing.Point(860, 3);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(206, 59);
-            this.buttonEdit.TabIndex = 5;
-            this.buttonEdit.Text = "Редактировать";
-            this.buttonEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonEdit.UseVisualStyleBackColor = true;
-            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            this.button1.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Navy;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(353, 764);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 59);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Печать";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.comboBoxSearch);
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.textBoxSearch);
+            this.panel2.Location = new System.Drawing.Point(12, 117);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1007, 74);
+            this.panel2.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(278, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(164, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Искомое значение";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Поле поиска";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1139, 83);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(215, 157);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Navy;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(1056, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(165, 59);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Отчет";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // FormSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1377, 1033);
+            this.ClientSize = new System.Drawing.Size(1377, 829);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.richTextBoxBook);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBoxSearch);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBoxSearch);
-            this.Controls.Add(this.label1);
             this.Name = "FormSearch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Library (поиск)";
@@ -686,6 +790,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.book2BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -803,5 +910,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
         private System.Windows.Forms.Button button_Save;
         private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.Button button1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button4;
     }
 }

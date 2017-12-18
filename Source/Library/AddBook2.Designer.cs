@@ -49,7 +49,6 @@
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxBBK = new System.Windows.Forms.TextBox();
             this.label45 = new System.Windows.Forms.Label();
@@ -58,6 +57,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonSaveForm2 = new System.Windows.Forms.Button();
+            this.textBoxRUB = new System.Windows.Forms.TextBox();
+            this.textBoxCOP = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -267,7 +270,10 @@
             // panel11
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel11.Controls.Add(this.textBoxPrice);
+            this.panel11.Controls.Add(this.label3);
+            this.panel11.Controls.Add(this.label2);
+            this.panel11.Controls.Add(this.textBoxCOP);
+            this.panel11.Controls.Add(this.textBoxRUB);
             this.panel11.Controls.Add(this.label1);
             this.panel11.Controls.Add(this.textBoxBBK);
             this.panel11.Controls.Add(this.label45);
@@ -277,15 +283,6 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1202, 186);
             this.panel11.TabIndex = 34;
-            // 
-            // textBoxPrice
-            // 
-            this.textBoxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxPrice.ForeColor = System.Drawing.Color.Red;
-            this.textBoxPrice.Location = new System.Drawing.Point(405, 103);
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(384, 27);
-            this.textBoxPrice.TabIndex = 41;
             // 
             // label1
             // 
@@ -380,6 +377,44 @@
             this.buttonSaveForm2.UseVisualStyleBackColor = true;
             this.buttonSaveForm2.Click += new System.EventHandler(this.buttonSaveForm2_Click);
             // 
+            // textBoxRUB
+            // 
+            this.textBoxRUB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxRUB.ForeColor = System.Drawing.Color.Red;
+            this.textBoxRUB.Location = new System.Drawing.Point(405, 103);
+            this.textBoxRUB.Name = "textBoxRUB";
+            this.textBoxRUB.Size = new System.Drawing.Size(100, 27);
+            this.textBoxRUB.TabIndex = 42;
+            // 
+            // textBoxCOP
+            // 
+            this.textBoxCOP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxCOP.ForeColor = System.Drawing.Color.Red;
+            this.textBoxCOP.Location = new System.Drawing.Point(563, 103);
+            this.textBoxCOP.Name = "textBoxCOP";
+            this.textBoxCOP.Size = new System.Drawing.Size(100, 27);
+            this.textBoxCOP.TabIndex = 43;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(511, 108);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 22);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "руб.";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(669, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(23, 22);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "к.";
+            // 
             // AddBook2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -435,8 +470,11 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
-        public System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSaveForm2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox textBoxCOP;
+        public System.Windows.Forms.TextBox textBoxRUB;
     }
 }

@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace Library
 {
@@ -16,9 +8,9 @@ namespace Library
         public AddBook2()
         {
             InitializeComponent();
-            if ( Program.N == 1)
+            if (Program.N == 1)
             {
-                buttonSaveForm2.Visible = true ;
+                buttonSaveForm2.Visible = true;
                 button1.Visible = false;
             }
             else
@@ -28,17 +20,22 @@ namespace Library
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        void button3_Click(object sender, EventArgs e)
         {
-
             Program.SERIES = new Series(textBoxTitleSeries.Text, textBoxParallelTitleSeries.Text, textBoxInformationPertainingTitleSeries.Text,
-                textBoxFirstInformationAboutLiabilityRelatedSeries.Text,textBoxSubsequentLiabilityInformationRelatingSeries.Text,textBoxISSN.Text,
+                textBoxFirstInformationAboutLiabilityRelatedSeries.Text, textBoxSubsequentLiabilityInformationRelatingSeries.Text, textBoxISSN.Text,
                 textBoxIssueNumberSeries.Text);
 
-            Program.STANDARDNUMBER = new StandardNumber(textBoxISBN.Text,textBoxBBK.Text,textBoxPrice.Text);
+            var price = new Price
+            {
+                RUB = Convert.ToInt32(textBoxRUB.Text),
+                COP = Convert.ToInt32(textBoxCOP.Text)
+            };
 
-            this.Close();
-            AddBook1 addbook1 = new AddBook1();
+            Program.STANDARDNUMBER = new StandardNumber(textBoxISBN.Text, textBoxBBK.Text, price);
+
+            Close();
+            var addbook1 = new AddBook1();
             addbook1.textBoxPlacePublication.Text = Program.OUTPUTDATA.PlacePublication;
             addbook1.textBoxFirstPlacePublication.Text = Program.OUTPUTDATA.FirstPlacePublication;
             addbook1.textBoxSubsequentPlacePublication.Text = Program.OUTPUTDATA.SubsequentPlacePublication;
@@ -54,20 +51,25 @@ namespace Library
             addbook1.textBoxDimensions.Text = Program.PHCHARACTERISTICS.Dimensions;
             addbook1.textBoxInformationAccompanyingMaterial.Text = Program.PHCHARACTERISTICS.InformationAccompanyingMaterial;
 
-
             addbook1.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        void button1_Click(object sender, EventArgs e)
         {
             Program.SERIES = new Series(textBoxTitleSeries.Text, textBoxParallelTitleSeries.Text, textBoxInformationPertainingTitleSeries.Text,
                 textBoxFirstInformationAboutLiabilityRelatedSeries.Text, textBoxSubsequentLiabilityInformationRelatingSeries.Text, textBoxISSN.Text,
                 textBoxIssueNumberSeries.Text);
 
-            Program.STANDARDNUMBER = new StandardNumber(textBoxISBN.Text, textBoxBBK.Text, textBoxPrice.Text);
+            var price = new Price
+            {
+                RUB = Convert.ToInt32(textBoxRUB.Text),
+                COP = Convert.ToInt32(textBoxCOP.Text)
+            };
 
-            DataBaseClass DB = new DataBaseClass();
-            if(DB.Insert())
+            Program.STANDARDNUMBER = new StandardNumber(textBoxISBN.Text, textBoxBBK.Text, price);
+
+            var DB = new DataBaseClass();
+            if (DB.Insert())
             {
                 MessageBox.Show("Успешно добавлено");
             }
@@ -75,21 +77,24 @@ namespace Library
             {
                 MessageBox.Show("Произошла ошибка при добавлении");
             }
-            this.Close();
+
+            Close();
         }
 
-        private void buttonSaveForm2_Click(object sender, EventArgs e)
+        void buttonSaveForm2_Click(object sender, EventArgs e)
         {
-
             Program.SERIES = new Series(textBoxTitleSeries.Text, textBoxParallelTitleSeries.Text, textBoxInformationPertainingTitleSeries.Text,
               textBoxFirstInformationAboutLiabilityRelatedSeries.Text, textBoxSubsequentLiabilityInformationRelatingSeries.Text, textBoxISSN.Text,
               textBoxIssueNumberSeries.Text);
+            var price = new Price
+            {
+                RUB = Convert.ToInt32(textBoxRUB.Text),
+                COP = Convert.ToInt32(textBoxCOP.Text)
+            };
+            Program.STANDARDNUMBER = new StandardNumber(textBoxISBN.Text, textBoxBBK.Text, price);
 
-            Program.STANDARDNUMBER = new StandardNumber(textBoxISBN.Text, textBoxBBK.Text, textBoxPrice.Text);
+            var DB = new DataBaseClass();
 
-            DataBaseClass DB = new DataBaseClass();
-            
-           
             if (DB.Update(Program.currentID))
             {
                 MessageBox.Show("Успешно обновлено");
@@ -99,8 +104,7 @@ namespace Library
                 MessageBox.Show("Произошла ошибка при обновлении");
             }
 
-            this.Close();
+            Close();
         }
-        
     }
 }

@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Security.Cryptography;
+using System.Text;
+using System.Windows.Forms;
 
 namespace Library
 {
@@ -19,42 +12,37 @@ namespace Library
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        void button1_Click(object sender, EventArgs e)
         {
-            Authorization f1 = new Authorization();
+            var f1 = new Authorization();
             f1.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        void button2_Click(object sender, EventArgs e)
         {
-
             using (SqlConnection con = new SqlConnection(@"Data Source=ЖЕНЯ-ПК;Initial Catalog=Employees;Integrated Security=True"))
             {
                 try
                 {
-                    string sql = "INSERT INTO employee (name, surname, middleName, login, password)" + "VALUES (@name, @surname, @middleName, @login, @password);";
+                    var sql = "INSERT INTO employee (name, surname, middleName, login, password)" + "VALUES (@name, @surname, @middleName, @login, @password);";
                     con.Open();
-                    SqlCommand cmd = new SqlCommand(sql, con);
-                    //создаем параметры и добавляем их в коллекцию
+                    var cmd = new SqlCommand(sql, con);
+                    // создаем параметры и добавляем их в коллекцию
 
+                    var name = textBoxName.Text.ToString();
+                    var surname = textBoxSurname.Text.ToString();
+                    var middleName = textBoxSecondName.Text.ToString();
+                    var login = textBoxLogin.Text.ToString();
+                    var password = textBoxPassword.Text.ToString();
 
-                    string name = textBoxName.Text.ToString();
-                    string surname = textBoxSurname.Text.ToString();
-                    string middleName = textBoxSecondName.Text.ToString();
-                    string login = textBoxLogin.Text.ToString();
-                    string password = textBoxPassword.Text.ToString();
-
-                    MD5 md5 = System.Security.Cryptography.MD5.Create();
+                    var md5 = System.Security.Cryptography.MD5.Create();
                     byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(password);
                     byte[] hash = md5.ComputeHash(inputBytes);
 
-                    StringBuilder PasswordHex = new StringBuilder();
+                    var PasswordHex = new StringBuilder();
 
                     for (int i = 0; i < hash.Length; i++)
-                
-                    {
                         PasswordHex.Append(hash[i].ToString("X2"));
-                    }
 
                     cmd.Parameters.AddWithValue("@name", name);
                     cmd.Parameters.AddWithValue("@surname", surname);
@@ -69,10 +57,8 @@ namespace Library
                 }
 
                 MessageBox.Show("Успешно добавлено");
-                this.Close();
+                Close();
             }
-      
-
         }
     }
 }

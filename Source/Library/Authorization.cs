@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Security.Cryptography;
-using System.Threading;
+using System.Text;
+using System.Windows.Forms;
 
 namespace Library
 {
@@ -20,45 +13,40 @@ namespace Library
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        void button1_Click(object sender, EventArgs e)
         {
-            
-            registration reg = new registration();
-            
+            var reg = new registration();
+
             reg.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        void button2_Click(object sender, EventArgs e)
         {
-           // FormSearch f = new FormSearch();
-           // f.Show();
-            MD5 md5 = System.Security.Cryptography.MD5.Create();
+            // FormSearch f = new FormSearch();
+            // f.Show();
+            var md5 = System.Security.Cryptography.MD5.Create();
             byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(textBox2.Text);
             byte[] hash = md5.ComputeHash(inputBytes);
 
-            StringBuilder PasswordHex = new StringBuilder();
+            var PasswordHex = new StringBuilder();
 
             for (int i = 0; i < hash.Length; i++)
-
-            {
                 PasswordHex.Append(hash[i].ToString("X2"));
-            }
 
-            SqlConnection con = new SqlConnection(@"Data Source=ЖЕНЯ-ПК;Initial Catalog=Employees;Integrated Security=True");
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT (*) FROM employee where  login = '"+ textBox1.Text +"' and password = '"+ PasswordHex.ToString() + "'",con);
-            DataTable dt = new DataTable();
+            var con = new SqlConnection(@"Data Source=ЖЕНЯ-ПК;Initial Catalog=Employees;Integrated Security=True");
+            var sda = new SqlDataAdapter("SELECT COUNT (*) FROM employee where  login = '" + textBox1.Text + "' and password = '" + PasswordHex.ToString() + "'", con);
+            var dt = new DataTable();
             sda.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1") 
+            if (dt.Rows[0][0].ToString() == "1")
             {
-                this.Hide();
-                FormSearch fe = new FormSearch();
+                Hide();
+                var fe = new FormSearch();
                 fe.Show();
-               
-            } else {
-                MessageBox.Show("Неверный логин или пароль");
-            
             }
-
+            else
+            {
+                MessageBox.Show("Неверный логин или пароль");
+            }
         }
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Library
@@ -17,14 +10,14 @@ namespace Library
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        void button3_Click(object sender, EventArgs e)
         {
             Program.PUBLICATION = new Publication(textBoxInformationOnThePublication.Text, textBoxParallelInformationAboutThePublication.Text, textBoxFirstInformationOnLiabilityRelatingPublication.Text,
                 textBoxFurtherInformationOnLiabilityRelatingPublication.Text, textBoxAdditionalInformationAboutPublication.Text, textBoxFirstInformationOnLiabilityRelatingToAdditionalInformationPublication.Text,
                 textBoxFurtherInformationOnLiabilityRelatingToAdditionalInformationPublication.Text);
-            this.Close();
-            
-            AddBook addbook = new AddBook();
+            Close();
+
+            var addbook = new AddBook();
 
             addbook.textBoxAuthor.Text = Program.HEADER.Author.ToString();
             addbook.textBoxAuthorSign.Text = Program.HEADER.AuthorSign.ToString();
@@ -33,18 +26,18 @@ namespace Library
             addbook.textBoxParallelTitle.Text = Program.TITLE.ParallelTitle.ToString();
             addbook.textBoxInformationPertainingToTheTitle.Text = Program.TITLE.InformationPertainingToTheTitle.ToString();
             addbook.textBoxFirstInformationOnLiability.Text = Program.TITLE.FirstInformationOnLiability.ToString();
-            addbook.textBoxFurtherInformationOnLiability.Text = Program.TITLE.FurtherInformationOnLiability.ToString();     
+            addbook.textBoxFurtherInformationOnLiability.Text = Program.TITLE.FurtherInformationOnLiability.ToString();
 
             addbook.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        void button1_Click(object sender, EventArgs e)
         {
-            Program.PUBLICATION = new Publication(textBoxInformationOnThePublication.Text,textBoxParallelInformationAboutThePublication.Text,textBoxFirstInformationOnLiabilityRelatingPublication.Text,
-                textBoxFurtherInformationOnLiabilityRelatingPublication.Text, textBoxAdditionalInformationAboutPublication.Text,textBoxFirstInformationOnLiabilityRelatingToAdditionalInformationPublication.Text,
+            Program.PUBLICATION = new Publication(textBoxInformationOnThePublication.Text, textBoxParallelInformationAboutThePublication.Text, textBoxFirstInformationOnLiabilityRelatingPublication.Text,
+                textBoxFurtherInformationOnLiabilityRelatingPublication.Text, textBoxAdditionalInformationAboutPublication.Text, textBoxFirstInformationOnLiabilityRelatingToAdditionalInformationPublication.Text,
                 textBoxFurtherInformationOnLiabilityRelatingToAdditionalInformationPublication.Text);
-            this.Close();
-            AddBook1 addbook1 = new AddBook1();
+            Close();
+            var addbook1 = new AddBook1();
             addbook1.textBoxPlacePublication.Text = Program.OUTPUTDATA.PlacePublication;
             addbook1.textBoxFirstPlacePublication.Text = Program.OUTPUTDATA.FirstPlacePublication;
             addbook1.textBoxSubsequentPlacePublication.Text = Program.OUTPUTDATA.SubsequentPlacePublication;
@@ -60,8 +53,7 @@ namespace Library
             addbook1.textBoxDimensions.Text = Program.PHCHARACTERISTICS.Dimensions;
             addbook1.textBoxInformationAccompanyingMaterial.Text = Program.PHCHARACTERISTICS.InformationAccompanyingMaterial;
 
-
-        addbook1.Show();
+            addbook1.Show();
         }
     }
 }

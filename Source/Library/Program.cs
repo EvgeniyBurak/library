@@ -1,17 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
 
 namespace Library
 {
-
     static class Program
     {
-
-
         public static Header HEADER = new Header();
         public static Title TITLE = new Title();
         public static Publication PUBLICATION = new Publication();
@@ -28,7 +21,6 @@ namespace Library
         [STAThread]
         static void Main()
         {
-            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Authorization());

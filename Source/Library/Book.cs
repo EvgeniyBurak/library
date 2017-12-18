@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using System.Collections; //Пространство имен где описаны интерфейсы для работы коллекций
 
 namespace Library
 {
+    struct Price
+    {
+        public int RUB { get; set; }
+        public int COP { get; set; }
+    }
     class Book
     {
-        
         public Header header;
         public Title title;
         public Publication publication;
@@ -20,46 +18,40 @@ namespace Library
         public StandardNumber standardNumber;
 
         public Book() { }
-
-
     }
-
 
     class Header
     {
-        
-        public String Author;
-        public String AuthorSign;
+        public string Author;
+        public string AuthorSign;
 
         public Header()
         {
-            this.Author = "";
-            this.AuthorSign = "";
+            Author = "";
+            AuthorSign = "";
         }
-        public Header(String author, String authorSign)
+        public Header(string author, string authorSign)
         {
-            this.Author = author;
-            this.AuthorSign = authorSign;
+            Author = author;
+            AuthorSign = authorSign;
         }
 
-        public String GetSetAuthor
+        public string GetSetAuthor
         {
             get
             {
-                if (Author.Length <= 0)
-                    return "";
+                if (Author.Length <= 0) return "";
                 return Author;
             }
 
             set { Author = value; }
         }
 
-        public String GetSetAuthorSign
+        public string GetSetAuthorSign
         {
             get
             {
-                if (AuthorSign.Length <= 0)
-                    return "";
+                if (AuthorSign.Length <= 0) return "";
                 return AuthorSign;
             }
 
@@ -81,26 +73,24 @@ namespace Library
 
     class Title
     {
-        public String MainTitle;
-        public String GeneralMaterialDesignation;
-        public String ParallelTitle;
-        public String InformationPertainingToTheTitle;
-        public String FirstInformationOnLiability;
-        public String FurtherInformationOnLiability;
-
+        public string MainTitle;
+        public string GeneralMaterialDesignation;
+        public string ParallelTitle;
+        public string InformationPertainingToTheTitle;
+        public string FirstInformationOnLiability;
+        public string FurtherInformationOnLiability;
 
         public Title()
         {
-            this.MainTitle = "";
-            this.GeneralMaterialDesignation = "";
-            this.ParallelTitle = "";
-            this.InformationPertainingToTheTitle = "";
-            this.FirstInformationOnLiability = "";
-            this.FurtherInformationOnLiability ="";
+            MainTitle = "";
+            GeneralMaterialDesignation = "";
+            ParallelTitle = "";
+            InformationPertainingToTheTitle = "";
+            FirstInformationOnLiability = "";
+            FurtherInformationOnLiability = "";
+        }
 
-    }
-
-    public Title(String MainTitle, String GeneralMaterialDesignation, String ParallelTitle, String InformationPertainingToTheTitle, String FirstInformationOnLiability, String FurtherInformationOnLiability)
+        public Title(string MainTitle, string GeneralMaterialDesignation, string ParallelTitle, string InformationPertainingToTheTitle, string FirstInformationOnLiability, string FurtherInformationOnLiability)
         {
             this.MainTitle = MainTitle;
             this.GeneralMaterialDesignation = GeneralMaterialDesignation;
@@ -110,19 +100,17 @@ namespace Library
             this.FurtherInformationOnLiability = FurtherInformationOnLiability;
         }
 
-
-        public String GetSetMainTitle
+        public string GetSetMainTitle
         {
             get
             {
-                if (MainTitle.Length <= 0)
-                    return "";
+                if (MainTitle.Length <= 0) return "";
                 return MainTitle;
             }
 
             set { MainTitle = value; }
         }
-        public String GetSetGeneralMaterialDesignation
+        public string GetSetGeneralMaterialDesignation
         {
             get
             {
@@ -133,18 +121,17 @@ namespace Library
 
             set { GeneralMaterialDesignation = value; }
         }
-        public String GetSetParallelTitle
+        public string GetSetParallelTitle
         {
             get
             {
-                if (ParallelTitle.Length <= 0)
-                    return "";
+                if (ParallelTitle.Length <= 0) return "";
                 return ParallelTitle;
             }
 
             set { ParallelTitle = value; }
         }
-        public String GetSetInformationPertainingToTheTitle
+        public string GetSetInformationPertainingToTheTitle
         {
             get
             {
@@ -155,7 +142,7 @@ namespace Library
 
             set { InformationPertainingToTheTitle = value; }
         }
-        public String GetSetFirstInformationOnLiability
+        public string GetSetFirstInformationOnLiability
         {
             get
             {
@@ -166,7 +153,7 @@ namespace Library
 
             set { FirstInformationOnLiability = value; }
         }
-        public String GetSetFurtherInformationOnLiability
+        public string GetSetFurtherInformationOnLiability
         {
             get
             {
@@ -193,19 +180,18 @@ namespace Library
 
     class Publication
     {
-
-        public String InformationOnThePublication;
-        public String ParallelInformationAboutThePublication;
-        public String FirstInformationOnLiabilityRelatingPublication;
-        public String FurtherInformationOnLiabilityRelatingPublication;
-        public String AdditionalInformationAboutPublication;
-        public String FirstInformationOnLiabilityRelatingToAdditionalInformationPublication;
-        public String FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication;
+        public string InformationOnThePublication;
+        public string ParallelInformationAboutThePublication;
+        public string FirstInformationOnLiabilityRelatingPublication;
+        public string FurtherInformationOnLiabilityRelatingPublication;
+        public string AdditionalInformationAboutPublication;
+        public string FirstInformationOnLiabilityRelatingToAdditionalInformationPublication;
+        public string FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication;
 
         public Publication() { }
 
-        public Publication(String InformationOnThePublication, String ParallelInformationAboutThePublication, String FirstInformationOnLiabilityRelatingPublication, 
-            String FurtherInformationOnLiabilityRelatingPublication, String AdditionalInformationAboutPublication, String FirstInformationOnLiabilityRelatingToAdditionalInformationPublication, String FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication)
+        public Publication(string InformationOnThePublication, string ParallelInformationAboutThePublication, string FirstInformationOnLiabilityRelatingPublication,
+            string FurtherInformationOnLiabilityRelatingPublication, string AdditionalInformationAboutPublication, string FirstInformationOnLiabilityRelatingToAdditionalInformationPublication, string FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication)
         {
             this.InformationOnThePublication = InformationOnThePublication;
             this.ParallelInformationAboutThePublication = ParallelInformationAboutThePublication;
@@ -216,8 +202,7 @@ namespace Library
             this.FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication = FurtherInformationOnLiabilityRelatingToAdditionalInformationPublication;
         }
 
-
-        public String GetSetInformationOnThePublication
+        public string GetSetInformationOnThePublication
         {
             get
             {
@@ -229,7 +214,7 @@ namespace Library
             set { InformationOnThePublication = value; }
         }
 
-        public String GetSetParallelInformationAboutThePublication
+        public string GetSetParallelInformationAboutThePublication
         {
             get
             {
@@ -240,7 +225,7 @@ namespace Library
 
             set { ParallelInformationAboutThePublication = value; }
         }
-        public String GetSetFirstInformationOnLiabilityRelatingPublication
+        public string GetSetFirstInformationOnLiabilityRelatingPublication
         {
             get
             {
@@ -251,7 +236,7 @@ namespace Library
 
             set { FirstInformationOnLiabilityRelatingPublication = value; }
         }
-        public String GetSetFurtherInformationOnLiabilityRelatingPublication
+        public string GetSetFurtherInformationOnLiabilityRelatingPublication
         {
             get
             {
@@ -262,7 +247,7 @@ namespace Library
 
             set { FurtherInformationOnLiabilityRelatingPublication = value; }
         }
-        public String GetSetAdditionalInformationAboutPublication
+        public string GetSetAdditionalInformationAboutPublication
         {
             get
             {
@@ -273,7 +258,7 @@ namespace Library
 
             set { AdditionalInformationAboutPublication = value; }
         }
-        public String GetSetFirstInformationOnLiabilityRelatingToAdditionalInformationPpublication
+        public string GetSetFirstInformationOnLiabilityRelatingToAdditionalInformationPpublication
         {
             get
             {
@@ -284,7 +269,7 @@ namespace Library
 
             set { FirstInformationOnLiabilityRelatingToAdditionalInformationPublication = value; }
         }
-        public String GetSetFurtherInformationOnLiabilityRelatingToAdditionalInformationPublication
+        public string GetSetFurtherInformationOnLiabilityRelatingToAdditionalInformationPublication
         {
             get
             {
@@ -311,20 +296,19 @@ namespace Library
 
     class OutputData
     {
-
-        public String PlacePublication;
-        public String FirstPlacePublication;
-        public String SubsequentPlacePublication;
-        public String NamePublisherDistributor;
-        public String InformationAboutFunctionsPublisher;
-        public String DatePublication;
-        public String PlaceManufacture;
-        public String ManufacturerName;
-        public String DateManufacture;
+        public string PlacePublication;
+        public string FirstPlacePublication;
+        public string SubsequentPlacePublication;
+        public string NamePublisherDistributor;
+        public string InformationAboutFunctionsPublisher;
+        public string DatePublication;
+        public string PlaceManufacture;
+        public string ManufacturerName;
+        public string DateManufacture;
 
         public OutputData() { }
-        public OutputData(String PlacePublication, String FirstPlacePublication, String SubsequentPlacePublication, String NamePublisherDistributor, String InformationAboutFunctionsPublisher,
-            String DatePublication, String PlaceManufacture, String ManufacturerName, String DateManufacture)
+        public OutputData(string PlacePublication, string FirstPlacePublication, string SubsequentPlacePublication, string NamePublisherDistributor, string InformationAboutFunctionsPublisher,
+            string DatePublication, string PlaceManufacture, string ManufacturerName, string DateManufacture)
         {
             this.PlacePublication = PlacePublication;
             this.FirstPlacePublication = FirstPlacePublication;
@@ -350,20 +334,18 @@ namespace Library
         }
     }
 
-
     class PhysicalCharacteristics
     {
-        public String SpecificDesignationMaterialAndVolume;
-        public String OtherInformationAboutPhysicalCharacteristics;
-        public String Dimensions;
-        public String InformationAccompanyingMaterial;
+        public string SpecificDesignationMaterialAndVolume;
+        public string OtherInformationAboutPhysicalCharacteristics;
+        public string Dimensions;
+        public string InformationAccompanyingMaterial;
 
         public PhysicalCharacteristics() { }
 
-        public PhysicalCharacteristics(String SpecificDesignationMaterialAndVolume, String OtherInformationAboutPhysicalCharacteristics,
-            String Dimensions, String InformationAccompanyingMaterial)
+        public PhysicalCharacteristics(string SpecificDesignationMaterialAndVolume, string OtherInformationAboutPhysicalCharacteristics,
+            string Dimensions, string InformationAccompanyingMaterial)
         {
-
             this.SpecificDesignationMaterialAndVolume = SpecificDesignationMaterialAndVolume;
             this.OtherInformationAboutPhysicalCharacteristics = OtherInformationAboutPhysicalCharacteristics;
             this.Dimensions = Dimensions;
@@ -385,18 +367,18 @@ namespace Library
 
     class Series
     {
-        public String TitleSeries;
-        public String ParallelTitleSeries;
-        public String InformationPertainingTitleSeries;
-        public String FirstInformationAboutLiabilityRelatedSeries;
-        public String SubsequentLiabilityInformationRelatingSeries;
-        public String ISSN;
-        public String IssueNumberSeries;
+        public string TitleSeries;
+        public string ParallelTitleSeries;
+        public string InformationPertainingTitleSeries;
+        public string FirstInformationAboutLiabilityRelatedSeries;
+        public string SubsequentLiabilityInformationRelatingSeries;
+        public string ISSN;
+        public string IssueNumberSeries;
 
         public Series() { }
-       
-        public Series(String TitleSeries, String ParallelTitleSeries,String InformationPertainingTitleSeries, String FirstInformationAboutLiabilityRelatedSeries,
-            String SubsequentLiabilityInformationRelatingSeries, String ISSN, String IssueNumberSeries)
+
+        public Series(string TitleSeries, string ParallelTitleSeries, string InformationPertainingTitleSeries, string FirstInformationAboutLiabilityRelatedSeries,
+            string SubsequentLiabilityInformationRelatingSeries, string ISSN, string IssueNumberSeries)
         {
             this.TitleSeries = TitleSeries;
             this.ParallelTitleSeries = ParallelTitleSeries;
@@ -422,18 +404,19 @@ namespace Library
 
     class StandardNumber
     {
-        public String ISBN;
-        public String BBK;
-        public String Price;
+        public string ISBN;
+        public string BBK;
+        public Price Pric;
+        public decimal Price;
 
         public StandardNumber() { }
 
-        public StandardNumber(String ISBN, String BBK, String Price)
+        public StandardNumber(string ISBN, string BBK, Price Pric)
         {
             this.ISBN = ISBN;
             this.BBK = BBK;
-            this.Price = Price;
-               
+            this.Pric = Pric;
+            Price = (decimal)((Convert.ToDouble(Pric.RUB)) + (Convert.ToDouble(Pric.COP) / 100));
         }
 
         internal Book Book
@@ -448,8 +431,4 @@ namespace Library
             }
         }
     }
-
-
-
-
 }

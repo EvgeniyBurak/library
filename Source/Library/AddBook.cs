@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Library
 {
-
-   
-
     public partial class AddBook : Form
     {
         public AddBook()
@@ -20,15 +10,14 @@ namespace Library
             InitializeComponent();
             if (Program.N == 1)
             {
-                this.textBoxAuthor.Text = Program.HEADER.Author.ToString();
-                this.textBoxAuthorSign.Text = Program.HEADER.AuthorSign.ToString();
-                this.textBoxMainTitle.Text = Program.TITLE.MainTitle.ToString();
-                this.textBoxGeneralMaterialDesignation.Text = Program.TITLE.GeneralMaterialDesignation.ToString();
-                this.textBoxParallelTitle.Text = Program.TITLE.ParallelTitle.ToString();
-                this.textBoxInformationPertainingToTheTitle.Text = Program.TITLE.InformationPertainingToTheTitle.ToString();
-                this.textBoxFirstInformationOnLiability.Text = Program.TITLE.FirstInformationOnLiability.ToString();
-                this.textBoxFurtherInformationOnLiability.Text = Program.TITLE.FurtherInformationOnLiability.ToString();
-
+                textBoxAuthor.Text = Program.HEADER.Author.ToString();
+                textBoxAuthorSign.Text = Program.HEADER.AuthorSign.ToString();
+                textBoxMainTitle.Text = Program.TITLE.MainTitle.ToString();
+                textBoxGeneralMaterialDesignation.Text = Program.TITLE.GeneralMaterialDesignation.ToString();
+                textBoxParallelTitle.Text = Program.TITLE.ParallelTitle.ToString();
+                textBoxInformationPertainingToTheTitle.Text = Program.TITLE.InformationPertainingToTheTitle.ToString();
+                textBoxFirstInformationOnLiability.Text = Program.TITLE.FirstInformationOnLiability.ToString();
+                textBoxFurtherInformationOnLiability.Text = Program.TITLE.FurtherInformationOnLiability.ToString();
             }
         }
 
@@ -36,9 +25,9 @@ namespace Library
         {
             Program.HEADER = new Header(textBoxAuthor.Text.ToString(), textBoxAuthorSign.Text.ToString());
             Program.TITLE = new Title(textBoxMainTitle.Text.ToString(), textBoxGeneralMaterialDesignation.Text.ToString(), textBoxParallelTitle.Text.ToString(), textBoxInformationPertainingToTheTitle.Text.ToString(), textBoxFirstInformationOnLiability.Text.ToString(), textBoxFurtherInformationOnLiability.Text.ToString());
-            this.Close();
+            Close();
 
-            AddBook0 addbook0 = new AddBook0();
+            var addbook0 = new AddBook0();
             addbook0.textBoxAdditionalInformationAboutPublication.Text = Program.PUBLICATION.InformationOnThePublication;
             addbook0.textBoxFirstInformationOnLiabilityRelatingPublication.Text = Program.PUBLICATION.FirstInformationOnLiabilityRelatingPublication;
             addbook0.textBoxFirstInformationOnLiabilityRelatingToAdditionalInformationPublication.Text = Program.PUBLICATION.FirstInformationOnLiabilityRelatingToAdditionalInformationPublication;

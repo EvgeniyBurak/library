@@ -1,25 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 
 namespace Library
 {
-    
     class DataBaseClass
     {
-      
-        public bool Update(int ID)
+        public bool Update(int iD)
         {
-
             using (SqlConnection con = new SqlConnection(@"Data Source=ЖЕНЯ-ПК; Initial Catalog=Books;Integrated Security=True"))
             {
                 try
                 {
-                    string sql = "UPDATE Book2 SET Author='" + Program.HEADER.Author +
+                    var sql = "UPDATE Book2 SET Author='" + Program.HEADER.Author +
                         "', AuthorSign='" + Program.HEADER.AuthorSign +
                         "', MainTitle='" + Program.TITLE.MainTitle +
                         "', GeneralMaterialDesignation='" + Program.TITLE.GeneralMaterialDesignation +
@@ -39,7 +31,7 @@ namespace Library
                         "', PlacePublication='" + Program.OUTPUTDATA.PlacePublication +
                         "', FirstPlacePublication='" + Program.OUTPUTDATA.FirstPlacePublication +
                         "', SubsequentPlacePublication='" + Program.OUTPUTDATA.SubsequentPlacePublication +
-                        "',  NamePublisherDistributor='" + Program.OUTPUTDATA.NamePublisherDistributor +
+                        "', NamePublisherDistributor='" + Program.OUTPUTDATA.NamePublisherDistributor +
                         "', InformationAboutFunctionsPublisher='" + Program.OUTPUTDATA.InformationAboutFunctionsPublisher +
                         "', DatePublication='" + Program.OUTPUTDATA.DatePublication +
                         "', PlaceManufacture='" + Program.OUTPUTDATA.PlaceManufacture +
@@ -61,19 +53,19 @@ namespace Library
 
                         "', ISBN='" + Program.STANDARDNUMBER.ISBN +
                         "', BBK='" + Program.STANDARDNUMBER.BBK +
-                        "', Price='" + Program.STANDARDNUMBER.Price +
-                        "', AddData='" + DateTime.Today.ToString() + "' WHERE id='" + ID + "';";
-
+                        "', Price=" + Program.STANDARDNUMBER.Price +
+                        "' WHERE id='" + iD + "';";
 
                     con.Open();
-                    SqlCommand cmd = new SqlCommand(sql, con);
-                    //создаем параметры и добавляем их в коллекцию
-                    SqlDataReader MyReader2;
-                    MyReader2 = cmd.ExecuteReader();
-                
-                    while (MyReader2.Read())
+                    var cmd = new SqlCommand(sql, con);
+                    // создаем параметры и добавляем их в коллекцию
+                    SqlDataReader myReader2;
+                    myReader2 = cmd.ExecuteReader();
+
+                    while (myReader2.Read())
                     {
                     }
+
                     con.Close();//Connection closed here  
                 }
                 catch (Exception ex)
@@ -81,39 +73,38 @@ namespace Library
                     return false;
                 }
             }
+
             return true;
         }
 
         public bool Delete(int id)
         {
-
             using (SqlConnection con = new SqlConnection(@"Data Source=ЖЕНЯ-ПК; Initial Catalog=Books;Integrated Security=True"))
             {
                 try
                 {
-                    string sql = "delete from book2 where id='" + id + "';";
+                    var sql = "delete from book2 where id='" + id + "';";
 
                     con.Open();
-                    SqlCommand cmd = new SqlCommand(sql, con);
-                    //создаем параметры и добавляем их в коллекцию
-
-
+                    var cmd = new SqlCommand(sql, con);
+                    // создаем параметры и добавляем их в коллекцию
 
                     SqlDataReader MyReader2;
                     MyReader2 = cmd.ExecuteReader();
-                    
+
                     while (MyReader2.Read())
                     {
                     }
+
                     con.Close();//Connection closed here  
                 }
                 catch (Exception ex)
                 {
                     return false;
                 }
+
                 return true;
             }
-
         }
 
         public bool Insert()
@@ -122,7 +113,7 @@ namespace Library
             {
                 try
                 {
-                    string sql = "INSERT INTO Book2 (Author, AuthorSign, MainTitle, GeneralMaterialDesignation, ParallelTitle, " +
+                    var sql = "INSERT INTO Book2 (Author, AuthorSign, MainTitle, GeneralMaterialDesignation, ParallelTitle, " +
                         "InformationPertainingToTheTitle, FirstInformationOnLiability, FurtherInformationOnLiability, " +
                         "InformationOnThePublication, ParallelInformationAboutThePublication, FirstInformationOnLiabilityRelatingPublication, " +
                         "FurtherInformationOnLiabilityRelatingPublication, AdditionalInformationAboutPublication, " +
@@ -190,8 +181,8 @@ namespace Library
                         "@AddData);";
 
                     con.Open();
-                    SqlCommand cmd = new SqlCommand(sql, con);
-                    //создаем параметры и добавляем их в коллекцию
+                    var cmd = new SqlCommand(sql, con);
+                    // создаем параметры и добавляем их в коллекцию
 
                     cmd.Parameters.AddWithValue("@Author", Program.HEADER.Author);
                     cmd.Parameters.AddWithValue("@AuthorSign", Program.HEADER.AuthorSign);
@@ -233,12 +224,11 @@ namespace Library
                     cmd.Parameters.AddWithValue("@SubsequentLiabilityInformationRelatingSeries", Program.SERIES.SubsequentLiabilityInformationRelatingSeries);
                     cmd.Parameters.AddWithValue("@ISSN", Program.SERIES.ISSN);
                     cmd.Parameters.AddWithValue("@IssueNumberSeries", Program.SERIES.IssueNumberSeries);
-
+                    var data = DateTime.Today.Day.ToString() + "." + DateTime.Today.Month.ToString() + "." + DateTime.Today.Year.ToString();
                     cmd.Parameters.AddWithValue("@ISBN", Program.STANDARDNUMBER.ISBN);
                     cmd.Parameters.AddWithValue("@BBK", Program.STANDARDNUMBER.BBK);
                     cmd.Parameters.AddWithValue("@Price", Program.STANDARDNUMBER.Price);
-                    cmd.Parameters.AddWithValue("@AddData", DateTime.Today.ToString());
-
+                    cmd.Parameters.AddWithValue("@AddData", data);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -248,11 +238,7 @@ namespace Library
                 }
 
                 return true;
-
             }
-
         }
-        
-
     }
 }
