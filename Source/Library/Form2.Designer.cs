@@ -35,7 +35,6 @@
             this.comboBoxSearch = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonEdit = new System.Windows.Forms.Button();
-            this.button_Save = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -106,7 +105,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.book2BindingSource)).BeginInit();
@@ -155,9 +153,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.buttonEdit);
-            this.panel1.Controls.Add(this.button_Save);
             this.panel1.Controls.Add(this.buttonUpdate);
             this.panel1.Controls.Add(this.buttonDelete);
             this.panel1.Controls.Add(this.button3);
@@ -172,7 +168,7 @@
             this.buttonEdit.ForeColor = System.Drawing.Color.Navy;
             this.buttonEdit.Image = ((System.Drawing.Image)(resources.GetObject("buttonEdit.Image")));
             this.buttonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEdit.Location = new System.Drawing.Point(232, 3);
+            this.buttonEdit.Location = new System.Drawing.Point(274, 3);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(206, 59);
             this.buttonEdit.TabIndex = 5;
@@ -181,28 +177,13 @@
             this.buttonEdit.UseVisualStyleBackColor = true;
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
-            // button_Save
-            // 
-            this.button_Save.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Save.ForeColor = System.Drawing.Color.Navy;
-            this.button_Save.Image = ((System.Drawing.Image)(resources.GetObject("button_Save.Image")));
-            this.button_Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_Save.Location = new System.Drawing.Point(669, 3);
-            this.button_Save.Name = "button_Save";
-            this.button_Save.Size = new System.Drawing.Size(165, 59);
-            this.button_Save.TabIndex = 4;
-            this.button_Save.Text = "Сохранить";
-            this.button_Save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_Save.UseVisualStyleBackColor = true;
-            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
-            // 
             // buttonUpdate
             // 
             this.buttonUpdate.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.ForeColor = System.Drawing.Color.Navy;
             this.buttonUpdate.Image = ((System.Drawing.Image)(resources.GetObject("buttonUpdate.Image")));
             this.buttonUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUpdate.Location = new System.Drawing.Point(857, 3);
+            this.buttonUpdate.Location = new System.Drawing.Point(792, 3);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(165, 59);
             this.buttonUpdate.TabIndex = 3;
@@ -217,7 +198,7 @@
             this.buttonDelete.ForeColor = System.Drawing.Color.Navy;
             this.buttonDelete.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelete.Image")));
             this.buttonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDelete.Location = new System.Drawing.Point(472, 3);
+            this.buttonDelete.Location = new System.Drawing.Point(547, 1);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(165, 59);
             this.buttonDelete.TabIndex = 2;
@@ -682,7 +663,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 59);
             this.button1.TabIndex = 9;
-            this.button1.Text = "Печать";
+            this.button1.Text = "Формуляр";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -748,21 +729,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Modern No. 20", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Navy;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1056, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(165, 59);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Отчет";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // FormSearch
             // 
@@ -908,7 +874,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn45;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn46;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn47;
-        private System.Windows.Forms.Button button_Save;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button button1;
         private System.Drawing.Printing.PrintDocument printDocument1;
@@ -918,6 +883,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button4;
     }
 }

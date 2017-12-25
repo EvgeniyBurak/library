@@ -8,31 +8,31 @@
       <DesignTimeValue Profile="(Default)">
         &lt;?xml version="1.0" encoding="utf-16"?&gt;
         &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-        &lt;ConnectionString&gt;Data Source=ЖЕНЯ-ПК;Initial Catalog=Library;Integrated Security=True&lt;/ConnectionString&gt;
+        &lt;ConnectionString&gt;Data Source=YAUHENI-PK;Initial Catalog=Library;Integrated Security=True&lt;/ConnectionString&gt;
         &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
         &lt;/SerializableConnectionString&gt;
       </DesignTimeValue>
-      <Value Profile="(Default)">Data Source=ЖЕНЯ-ПК;Initial Catalog=Library;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=YAUHENI-PK;Initial Catalog=Library;Integrated Security=True</Value>
     </Setting>
     <Setting Name="BooksConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">
         &lt;?xml version="1.0" encoding="utf-16"?&gt;
         &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-        &lt;ConnectionString&gt;Data Source=ЖЕНЯ-ПК;Initial Catalog=Books;Integrated Security=True&lt;/ConnectionString&gt;
+        &lt;ConnectionString&gt;Data Source=YAUHENI-PK;Initial Catalog=Books;Integrated Security=True&lt;/ConnectionString&gt;
         &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
         &lt;/SerializableConnectionString&gt;
       </DesignTimeValue>
-      <Value Profile="(Default)">Data Source=ЖЕНЯ-ПК;Initial Catalog=Books;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=YAUHENI-PK;Initial Catalog=Books;Integrated Security=True</Value>
     </Setting>
     <Setting Name="BooksDataBase" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">
         &lt;?xml version="1.0" encoding="utf-16"?&gt;
         &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-        &lt;ConnectionString&gt;Provider=SQLNCLI11;Data Source=ЖЕНЯ-ПК;Integrated Security=SSPI;Initial Catalog=Books&lt;/ConnectionString&gt;
+        &lt;ConnectionString&gt;Provider=SQLNCLI11;Data Source=YAUHENI-PK;Integrated Security=SSPI;Initial Catalog=Books&lt;/ConnectionString&gt;
         &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
         &lt;/SerializableConnectionString&gt;
       </DesignTimeValue>
-      <Value Profile="(Default)">Provider=SQLNCLI11;Data Source=ЖЕНЯ-ПК;Integrated Security=SSPI;Initial Catalog=Books</Value>
+      <Value Profile="(Default)">Provider=SQLNCLI11;Data Source=YAUHENI-PK;Integrated Security=SSPI;Initial Catalog=Books</Value>
     </Setting>
   </Settings>
 </SettingsFile>

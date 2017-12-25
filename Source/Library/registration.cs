@@ -22,7 +22,7 @@ namespace Library
         private void button2_Click(object sender, EventArgs e)
         {
             using (var con =
-                new SqlConnection(@"Data Source=ЖЕНЯ-ПК;Initial Catalog=Employees;Integrated Security=True"))
+                new SqlConnection(@"Data Source=YAUHENI-PK;Initial Catalog=Employees;Integrated Security=True"))
             {
                 try
                 {

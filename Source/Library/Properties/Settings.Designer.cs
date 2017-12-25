@@ -26,7 +26,7 @@ namespace Library.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ЖЕНЯ-ПК;Initial Catalog=Library;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=YAUHENI-PK;Initial Catalog=Library;Integrated Security=True")]
         public string LibraryConnectionString {
             get {
                 return ((string)(this["LibraryConnectionString"]));
@@ -36,7 +36,7 @@ namespace Library.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ЖЕНЯ-ПК;Initial Catalog=Books;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=YAUHENI-PK;Initial Catalog=Books;Integrated Security=True")]
         public string BooksConnectionString {
             get {
                 return ((string)(this["BooksConnectionString"]));
@@ -46,8 +46,8 @@ namespace Library.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=SQLNCLI11;Data Source=ЖЕНЯ-ПК;Integrated Security=SSPI;Initial Catalog=B" +
-            "ooks")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=SQLNCLI11;Data Source=YAUHENI-PK;Integrated Security=SSPI;Initial Catalo" +
+            "g=Books")]
         public string BooksDataBase {
             get {
                 return ((string)(this["BooksDataBase"]));

@@ -227,13 +227,18 @@ namespace Library
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            button1.Enabled = false;
+            button1.Text = "Ждите...";
             var app = new Microsoft.Office.Interop.Word.Application();
             var doc = app.Documents.Open(
-                @"C:\Users\Женя\Desktop\3 КУРС\ТРиТПО\library\Source\Library\dociment\card.docx");
+                  @"C:\Users\Женя\Desktop\3 КУРС\ТРиТПО\library\Source\Library\dociment\card.docx");
             object missing = Missing.Value;
 
             doc.Content.Text += richTextBoxBook.Text;
-            app.Visible = true; //Optional
+            app.Visible = true;
+            button1.Enabled = true;
+            button1.Text = "Формуляр";
+            //Optional
             // doc.D();
 
             // if (printPreviewDialog1.ShowDialog() == DialogResult.OK)

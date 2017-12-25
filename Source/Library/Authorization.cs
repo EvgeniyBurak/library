@@ -34,7 +34,7 @@ namespace Library
             for (var i = 0; i < hash.Length; i++)
                 PasswordHex.Append(hash[i].ToString("X2"));
 
-            var con = new SqlConnection(@"Data Source=ЖЕНЯ-ПК;Initial Catalog=Employees;Integrated Security=True");
+            var con = new SqlConnection(@"Data Source=YAUHENI-PK;Initial Catalog=Employees;Integrated Security=True");
             var sda = new SqlDataAdapter(
                 "SELECT COUNT (*) FROM employee where  login = '" + textBox1.Text + "' and password = '" + PasswordHex +
                 "'", con);

@@ -7,7 +7,7 @@ namespace Library
     {
         public bool Update(int iD)
         {
-            using (var con = new SqlConnection(@"Data Source=ЖЕНЯ-ПК; Initial Catalog=Books;Integrated Security=True"))
+            using (var con = new SqlConnection(@"Data Source=YAUHENI-PK; Initial Catalog=Books;Integrated Security=True"))
             {
                 try
                 {
@@ -89,7 +89,7 @@ namespace Library
 
         public bool Delete(int id)
         {
-            using (var con = new SqlConnection(@"Data Source=ЖЕНЯ-ПК; Initial Catalog=Books;Integrated Security=True"))
+            using (var con = new SqlConnection(@"Data Source=YAUHENI-PK; Initial Catalog=Books;Integrated Security=True"))
             {
                 try
                 {
@@ -119,7 +119,7 @@ namespace Library
 
         public bool Insert()
         {
-            using (var con = new SqlConnection(@"Data Source=ЖЕНЯ-ПК; Initial Catalog=Books;Integrated Security=True"))
+            using (var con = new SqlConnection(@"Data Source=YAUHENI-PK; Initial Catalog=Books;Integrated Security=True"))
             {
                 try
                 {
